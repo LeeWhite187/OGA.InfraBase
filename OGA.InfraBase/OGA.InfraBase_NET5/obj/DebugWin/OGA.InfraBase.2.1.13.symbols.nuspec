@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>OGA.InfraBase</id>
+    <version>2.1.13</version>
+    <authors>Lee White</authors>
+    <description>Base library for infrastructure classes, and entities of any Id type.</description>
+    <releaseNotes>Type:			Project Release Notes
+For:			Infrastructure Base Library
+Date:			20220927
+Description:	This is the base set of classes to be consumed by an infrastructure library of a domain-designed project.
+It includes the following:
+The DabaseContext base class, which needs to be referenced by all database-specific context classes.
+Attributes for decorating data context classes, so they can be cataloged at application startup, for automated
+instanciation and dependency injection.
+A data context extension, that can check if migration are applied and get a list of pending migrations.
+A generic Paginated List class, which can be used by repository implementations for composing and returning
+paginated results of a particular type.
+The generic repository base class that can be used by domain services for data context interaction.
+The Config Update Service class, which provides accessibility to build data of the running process.
+The Config Service class, that provides key-value access to configuration data, stored in a database.
+The URI Service class, which simplifies the ability to decorate a URL with query parameters for
+a specific page of result data.
+Targets:		Only one compiled target is currently generated, that supports all entity ID datatypes (string, int, Guid, etc), using a generic.
+Dependencies:	.NET 5.0
+.NET 6.0
+Microsoft.EntityFrameworkCore.Design v5.0.10 or v6.0.6
+Microsoft.EntityFrameworkCore.Relational v5.0.10 or v6.0.6
+Microsoft.EntityFrameworkCore.Tools v5.0.10 or v6.0.6
+NETCore_Common v1.5.8
+OGA.DomainBase v2.0.6
+OGA.SharedKernel v1.2.1
+Repo_URL:		https://192.168.1.217/svn/NETCore_SoftwareLibraries/
+Source_Path:	NETCore SoftwareLibraries/OGA.InfraBase
+Binary_URL:		http://192.168.1.161:8080/packages/oga.infrabase
+Binary_URL:		http://192.168.1.161:8080/packages/oga.infrabase_NET6
+----------------------------------------
+Current:
+Release:	v2.1.13
+Date:		20220927
+Build:		37
+Changes:
+1.	Updated with latest library references.
+----------------------------------------
+Pending Changes:
+Include in next release version...
+----------------------------------------
+History:
+Release:	v2.1.12
+Date:		20220821
+Build:		36
+Changes:
+1.	Updated with latest library references.
+Release:	v2.1.11
+Date:		20220816
+Build:		35
+Changes:
+1.	Updated with latest library references.
+Release:	v2.1.5
+Date:		20220706
+Build:		29
+Changes:
+1.	Built project with latest binaries, and created library target for NET 6.
+Release:	v2.1.3
+Date:		20220625
+Build:		27
+Changes:
+1.	Built project with latest binaries, and created library target for NET 6.
+Release:	v2.1.1
+Date:		20220625
+Build:		25
+Changes:
+1.	Built project with latest binaries, and created library target for NET 6.
+Release:	v2.1.0
+Date:		20220424
+Build:		24
+Changes:
+1.	Updated UriService to add additional methods for creating URLS for routes.
+Release:	v2.1.0
+Date:		20220424
+Build:		24
+Changes:
+1.	Updated UriService to add additional methods for creating URLS for routes.
+Release:	v2.0.4
+Date:		20220422
+Build:		23
+Changes:
+1.	Compiled against latest binaries.
+Release:	v2.0.3
+Date:		20220413
+Build:		22
+Changes:
+1.	Compiled against latest binaries.
+Release:	v2.0.2
+Date:		20220413
+Build:		21
+Changes:
+1.	Compiled against latest binaries.
+Release:	v2.0.1
+Date:		20220222
+Build:		20
+Changes:
+1.	Compiled against latest binaries.
+Release:	v2.0.0
+Date:		20220213
+Build:		19
+Changes:
+1.	Updated the Infrastructure Base project to utilize a generic type for the entity ID across all classes.
+This change allows for one compiled binary to be used for all Id types.
+Release:	v1.2.0
+Date:		20220204
+Build:		16
+Changes:
+1.	Updated PaginatedList class to put the new keyword back on the CreateAsync with URI parameter.
+After some testing, the new keyword is actually needed for this call.
+2.	Update PaginatedList with URL class to fix a logic flaw in its constructor.
+From testing, the constructor of the derived URL class, adds a duplicate set of entries.
+This is because the base class already adds the range of elements.
+So, the actions in the constructor are commented out, to prevent data duplication.
+3.	Compiled against latest binaries.
+Release:	v1.1.1
+Date:		20220203
+Build:		15
+Changes:
+1.	Compiled against latest binaries.
+Release:	v1.1.0
+Date:		20220202
+Build:		14
+Changes:
+1.	Updated PaginatedList class to remove the new keyword from the CreateAsync with URI parameter.
+The new keyword was not needed for this call.
+2.	Compiled against latest binaries.
+Release:	v1.1.0
+Date:		20220202
+Build:		14
+Changes:
+1.	Updated PaginatedList class to remove the new keyword from the CreateAsync with URI parameter.
+The new keyword was not needed for this call.
+2.	Compiled against latest binaries.
+Release:	v1.0.9
+Date:		20220127
+Build:		13
+Changes:
+1.	Compiled against latest libraries.
+Release:	v1.0.8
+Date:		20220126
+Build:		12
+Changes:
+1.	Compiled against latest libraries.
+Release:	v1.0.7
+Date:		20220125
+Build:		11
+Changes:
+1.	Compiled against latest libraries.
+Release:	v1.0.6
+Date:		20220125
+Build:		10
+Changes:
+1.	Compiled against latest libraries.
+Release:	v1.0.5
+Date:		20220116
+Build:		9
+Changes:
+1.	Compiled against latest libraries.
+Release:	v1.0.4
+Date:		20220116
+Build:		8
+Changes:
+1.	Compiled against latest libraries.
+Release:	v1.0.3
+Date:		20220114
+Build:		7
+Changes:
+1.	Compiled against latest libraries.
+Release:	v1.0.1
+Date:		20211212
+Changes:
+No actual updates in this version.
+The version was incremented to test the nuget pipeline.
+Release:	v1.0.0
+Date:		20211212
+Changes:
+No actual updates in this version.
+This version was incremented to test the nuget pipeline.
+Release:	v1.0.0-build2
+Date:		20211212
+Changes:
+No actual updates in this version.
+This version was incremented to test the nuget pipeline.</releaseNotes>
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="Microsoft.EntityFrameworkCore.Relational" version="5.0.17" exclude="Build,Analyzers" />
+        <dependency id="NETCore_Common" version="1.5.9" exclude="Build,Analyzers" />
+        <dependency id="OGA.DomainBase" version="2.0.7" exclude="Build,Analyzers" />
+        <dependency id="OGA.SharedKernel" version="1.5.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5\bin\DebugWin\net5.0\OGA.InfraBase.pdb" target="lib\net5.0\OGA.InfraBase.pdb" />
+  </files>
+</package>

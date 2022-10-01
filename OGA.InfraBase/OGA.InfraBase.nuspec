@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>OGA.InfraBase</id>
+    <title>OGA Infrastructure Libraries</title>
+    <version>2.1.13</version>
+    <authors>Lee White</authors>
+    <description>Base library for infrastructure classes, and entities of any Id type.</description>
+    <owners>Lee White</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>(Please write the package release notes in "OGA.InfraBase-RELEASE_NOTES.txt".)</releaseNotes>
+    <copyright>$copyright$</copyright>
+
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="Microsoft.EntityFrameworkCore.Relational" version="5.0.17" exclude="Build,Analyzers" />
+        <dependency id="NETCore_Common" version="1.5.9" exclude="Build,Analyzers" />
+        <dependency id="OGA.DomainBase" version="2.0.7" exclude="Build,Analyzers" />
+        <dependency id="OGA.SharedKernel" version="1.5.2" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net6.0">
+        <dependency id="Microsoft.EntityFrameworkCore.InMemory" version="6.0.9" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.Relational" version="6.0.9" exclude="Build,Analyzers" />
+        <dependency id="NETCore_Common" version="1.5.9" exclude="Build,Analyzers" />
+        <dependency id="OGA.DomainBase" version="2.0.7" exclude="Build,Analyzers" />
+        <dependency id="OGA.SharedKernel" version="1.5.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src=".\OGA.InfraBase_NET6\bin\DebugWin\net6.0\win-x64\OGA.InfraBase.dll" target="ref\net6.0" />
+    <file src=".\OGA.InfraBase_NET6\bin\DebugWin\net6.0\win-x64\OGA.InfraBase.dll" target="runtimes\win-x64\lib\net6.0" />
+    <file src=".\OGA.InfraBase_NET6\bin\DebugWin\net6.0\win-x64\OGA.InfraBase.pdb" target="runtimes\win-x64\lib\net6.0" />
+    <file src=".\OGA.InfraBase_NET6\bin\DebugLinux\net6.0\linux-x64\OGA.InfraBase.dll" target="runtimes\linux-x64\lib\net6.0" />
+    <file src=".\OGA.InfraBase_NET6\bin\DebugLinux\net6.0\linux-x64\OGA.InfraBase.pdb" target="runtimes\linux-x64\lib\net6.0" />
+
+    <file src=".\OGA.InfraBase_NET5\bin\DebugWin\net5.0\win-x64\OGA.InfraBase.dll" target="ref\net5.0" />
+    <file src=".\OGA.InfraBase_NET5\bin\DebugWin\net5.0\win-x64\OGA.InfraBase.dll" target="runtimes\win-x64\lib\net5.0" />
+    <file src=".\OGA.InfraBase_NET5\bin\DebugWin\net5.0\win-x64\OGA.InfraBase.pdb" target="runtimes\win-x64\lib\net5.0" />
+    <file src=".\OGA.InfraBase_NET5\bin\DebugLinux\net5.0\linux-x64\OGA.InfraBase.dll" target="runtimes\linux-x64\lib\net5.0" />
+    <file src=".\OGA.InfraBase_NET5\bin\DebugLinux\net5.0\linux-x64\OGA.InfraBase.pdb" target="runtimes\linux-x64\lib\net5.0" />
+  </files>
+</package>

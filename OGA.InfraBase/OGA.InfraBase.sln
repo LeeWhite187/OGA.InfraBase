@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "OGA.InfraBase_SP", "OGA.InfraBase_SP\OGA.InfraBase_SP.shproj", "{C921BBD2-A699-443A-A0BD-68C6644423F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OGA.InfraBase_NET5", "OGA.InfraBase_NET5\OGA.InfraBase_NET5.csproj", "{1D7011C7-9A39-4E15-9849-3FD87E89EDF3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OGA.InfraBase_NET6", "OGA.InfraBase_NET6\OGA.InfraBase_NET6.csproj", "{9F0BC747-2AC2-467A-B739-A9E938FA1701}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OGA.InfraBase_NET5_Tests", "OGA.InfraBase_NET5_Tests\OGA.InfraBase_NET5_Tests.csproj", "{5ABB964D-9C9C-42ED-AB6B-9F098328F050}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02489507-0701-4C8F-B846-5085C57F35F6}"
+	ProjectSection(SolutionItems) = preProject
+		OGA.InfraBase-RELEASE-NOTES.txt = OGA.InfraBase-RELEASE-NOTES.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D7011C7-9A39-4E15-9849-3FD87E89EDF3}.Debug|Any CPU.ActiveCfg = DebugWin|Any CPU
+		{1D7011C7-9A39-4E15-9849-3FD87E89EDF3}.Debug|Any CPU.Build.0 = DebugWin|Any CPU
+		{1D7011C7-9A39-4E15-9849-3FD87E89EDF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D7011C7-9A39-4E15-9849-3FD87E89EDF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F0BC747-2AC2-467A-B739-A9E938FA1701}.Debug|Any CPU.ActiveCfg = DebugWin|Any CPU
+		{9F0BC747-2AC2-467A-B739-A9E938FA1701}.Debug|Any CPU.Build.0 = DebugWin|Any CPU
+		{9F0BC747-2AC2-467A-B739-A9E938FA1701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F0BC747-2AC2-467A-B739-A9E938FA1701}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ABB964D-9C9C-42ED-AB6B-9F098328F050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ABB964D-9C9C-42ED-AB6B-9F098328F050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ABB964D-9C9C-42ED-AB6B-9F098328F050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ABB964D-9C9C-42ED-AB6B-9F098328F050}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F440C8E4-DDBE-4E3B-B03A-641466A85940}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		OGA.InfraBase_SP\OGA.InfraBase_SP.projitems*{1d7011c7-9a39-4e15-9849-3fd87e89edf3}*SharedItemsImports = 5
+		OGA.InfraBase_SP\OGA.InfraBase_SP.projitems*{9f0bc747-2ac2-467a-b739-a9e938fa1701}*SharedItemsImports = 5
+		OGA.InfraBase_SP\OGA.InfraBase_SP.projitems*{c921bbd2-a699-443a-a0bd-68c6644423f8}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

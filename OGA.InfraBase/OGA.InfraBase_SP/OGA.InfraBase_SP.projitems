@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>c921bbd2-a699-443a-a0bd-68c6644423f8</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>OGA.InfraBase_SP</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DataContexts\cDBDContext_Base.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataContexts\DataContextAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataContexts\DataContext_Extensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataContexts\DbContextExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryHelpers\PaginatedList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\Repository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\cConfigUpdateService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\cDBConfigService_Base.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UriService.cs" />
+  </ItemGroup>
+</Project>
