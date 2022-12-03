@@ -9,7 +9,7 @@ using OGA.DomainBase.QueryHelpers;
 using OGA.SharedKernel.QueryHelpers;
 using OGA.SharedKernel.Services;
 
-namespace OGA_WebAPI_Base.QueryHelpers
+namespace OGA.InfraBase.QueryHelpers
 {
     /// <summary>
     /// Used to create a paginated list of a particular DTO type.

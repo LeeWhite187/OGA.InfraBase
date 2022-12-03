@@ -7,14 +7,14 @@ using Microsoft.EntityFrameworkCore;
 using OGA.SharedKernel.QueryHelpers;
 using OGA.SharedKernel.Services;
 
-namespace OGA.DomainBase.QueryHelpers
+namespace OGA.InfraBase.QueryHelpers
 {
     /// <summary>
     /// Used to create a paginated list of a particular DTO type.
     /// Has a static method as its primary usage interface, that returns the pagination instance.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class PaginatedList<T> : List<T>, IPaginatedList<T>
+    public class PaginatedList<T> : List<T>, OGA.DomainBase.QueryHelpers.IPaginatedList<T>
     {
         public int PageSize { get; set; }
         public int CurrentPage { get; set; }
@@ -68,7 +68,7 @@ namespace OGA.DomainBase.QueryHelpers
         /// <param name="pageIndex"></param>
         /// <param name="pageSize"></param>
         /// <returns></returns>
-        static public async Task<IPaginatedList<T>> CreateAsync(IQueryable<T> source, int pageIndex, int pageSize)
+        static public async Task<OGA.DomainBase.QueryHelpers.IPaginatedList<T>> CreateAsync(IQueryable<T> source, int pageIndex, int pageSize)
         {
             // Check that the page index is valid...
             if (pageSize < 1)
@@ -102,7 +102,7 @@ namespace OGA.DomainBase.QueryHelpers
     /// Has a static method as its primary usage interface, that returns the pagination instance.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class PaginatedList_withURL<T> : PaginatedList<T>, IPaginatedList_withURL<T>
+    public class PaginatedList_withURL<T> : PaginatedList<T>, OGA.DomainBase.QueryHelpers.IPaginatedList_withURL<T>
     {
         public Uri FirstPage { get; set; }
         public Uri LastPage { get; set; }
@@ -139,7 +139,7 @@ namespace OGA.DomainBase.QueryHelpers
         /// <param name="pageIndex"></param>
         /// <param name="pageSize"></param>
         /// <returns></returns>
-        static public new async Task<IPaginatedList_withURL<T>> CreateAsync(IQueryable<T> source, int pageIndex, int pageSize, IUriService urisvc, string route)
+        static public new async Task<OGA.DomainBase.QueryHelpers.IPaginatedList_withURL<T>> CreateAsync(IQueryable<T> source, int pageIndex, int pageSize, IUriService urisvc, string route)
         {
             // Check that the page index is valid...
             if (pageSize < 1)
