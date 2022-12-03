@@ -189,6 +189,8 @@ No actual updates in this version.
 This version was incremented to test the nuget pipeline.</releaseNotes>
     <dependencies>
       <group targetFramework="net5.0">
+        <dependency id="AutoMapper" version="12.0.0" exclude="Build,Analyzers" />
+        <dependency id="AutoMapper.Extensions.Microsoft.DependencyInjection" version="12.0.0" exclude="Build,Analyzers" />
         <dependency id="Microsoft.EntityFrameworkCore.Relational" version="5.0.17" exclude="Build,Analyzers" />
         <dependency id="NETCore_Common" version="1.5.9" exclude="Build,Analyzers" />
         <dependency id="OGA.DomainBase" version="2.0.7" exclude="Build,Analyzers" />
@@ -197,7 +199,7 @@ This version was incremented to test the nuget pipeline.</releaseNotes>
     </dependencies>
   </metadata>
   <files>
-    <file src="P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5\bin\DebugLinux\net5.0\linux-x64\OGA.InfraBase.runtimeconfig.json" target="lib\net5.0\OGA.InfraBase.runtimeconfig.json" />
-    <file src="P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5\bin\DebugLinux\net5.0\linux-x64\OGA.InfraBase.dll" target="lib\net5.0\OGA.InfraBase.dll" />
+    <file src="P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5\bin\DebugLinux\net5.0\OGA.InfraBase.runtimeconfig.json" target="lib\net5.0\OGA.InfraBase.runtimeconfig.json" />
+    <file src="P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5\bin\DebugLinux\net5.0\OGA.InfraBase.dll" target="lib\net5.0\OGA.InfraBase.dll" />
   </files>
 </package>

@@ -58,7 +58,7 @@ namespace OGA.DomainBase_Tests
                             select b;
 
                 // Declare an instance of our test class...
-                var pl = OGA.DomainBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
+                var pl = OGA.InfraBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
 
                 // See how many elements we have...
                 if (pl.PageSize != 10)
@@ -111,7 +111,7 @@ namespace OGA.DomainBase_Tests
                             select b;
 
                 // Declare an instance of our test class...
-                var pl = OGA.DomainBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
+                var pl = OGA.InfraBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
 
                 // See how many elements we have...
                 if (pl.PageSize != 10)
@@ -164,7 +164,7 @@ namespace OGA.DomainBase_Tests
                             select b;
 
                 // Declare an instance of our test class...
-                var pl = OGA.DomainBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
+                var pl = OGA.InfraBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
 
                 // See how many elements we have...
                 if (pl.PageSize != 10)
@@ -217,7 +217,7 @@ namespace OGA.DomainBase_Tests
                             select b;
 
                 // Declare an instance of our test class...
-                var pl = OGA.DomainBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
+                var pl = OGA.InfraBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
 
                 // See how many elements we have...
                 if (pl.PageSize != 10)
@@ -270,7 +270,7 @@ namespace OGA.DomainBase_Tests
                             select b;
 
                 // Declare an instance of our test class...
-                var pl = OGA.DomainBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
+                var pl = OGA.InfraBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
 
                 // See how many elements we have...
                 if (pl.PageSize != 10)
@@ -323,7 +323,7 @@ namespace OGA.DomainBase_Tests
                             select b;
 
                 // Declare an instance of our test class...
-                var pl = OGA.DomainBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
+                var pl = OGA.InfraBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
 
                 // See how many elements we have...
                 if (pl.PageSize != 10)
@@ -376,7 +376,7 @@ namespace OGA.DomainBase_Tests
                             select b;
 
                 // Declare an instance of our test class...
-                var pl = OGA.DomainBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
+                var pl = OGA.InfraBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
 
                 // See how many elements we have...
                 if (pl.PageSize != 10)
@@ -429,7 +429,7 @@ namespace OGA.DomainBase_Tests
                             select b;
 
                 // Declare an instance of our test class...
-                var pl = OGA.DomainBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 2, 10).Result;
+                var pl = OGA.InfraBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 2, 10).Result;
 
                 // See how many elements we have...
                 if (pl.PageSize != 10)
@@ -482,7 +482,7 @@ namespace OGA.DomainBase_Tests
                             select b;
 
                 // Declare an instance of our test class...
-                var pl = OGA.DomainBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 3, 10).Result;
+                var pl = OGA.InfraBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 3, 10).Result;
 
                 // See how many elements we have...
                 if (pl.PageSize != 10)
@@ -536,7 +536,7 @@ namespace OGA.DomainBase_Tests
 
                 try
                 {
-                    var pl = OGA.DomainBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 0, 10).Result;
+                    var pl = OGA.InfraBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 0, 10).Result;
 
                     Assert.Fail("An exception should have been thrown.");
                 }
@@ -592,7 +592,7 @@ namespace OGA.DomainBase_Tests
 
                 try
                 {
-                    var pl = OGA.DomainBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 0).Result;
+                    var pl = OGA.InfraBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 0).Result;
 
                     Assert.Fail("An exception should have been thrown.");
                 }
@@ -647,7 +647,7 @@ namespace OGA.DomainBase_Tests
                             select b;
 
                 // Declare an instance of our test class...
-                var pl = OGA.DomainBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
+                var pl = OGA.InfraBase.QueryHelpers.PaginatedList<OGA.DomainBase_Tests.TestClass_GuidId>.CreateAsync(query, 1, 10).Result;
 
                 // See how many elements we have...
                 if (pl.PageSize != 10)

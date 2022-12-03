@@ -60,7 +60,7 @@ namespace OGA.InfraBase.Services
             string strurl = _enpointUri.ToString();
             foreach (var qp in queryparms)
             {
-                strurl = QueryHelpers.AddQueryString(strurl, qp.Key, qp.Value);
+                strurl = Microsoft.AspNetCore.WebUtilities.QueryHelpers.AddQueryString(strurl, qp.Key, qp.Value);
             }
             // At this point, all parameters are pushed in, and the URL is a string.
 
