@@ -19,3 +19,7 @@ C:\Programs\nuget\nuget.exe pack ./OGA.InfraBase.nuspec -IncludeReferencedProjec
 REM To publish nuget package...
 dotnet nuget push -s http://192.168.1.161:8080/v3/index.json ".\Publish\OGA.InfraBase.1.5.8.nupkg"
 dotnet nuget push -s http://192.168.1.161:8080/v3/index.json ".\Publish\OGA.InfraBase.1.5.8.snupkg"
+
+TIMEOUT 10
+
+ECHO "DONE"

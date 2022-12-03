@@ -139,3 +139,9 @@ P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5_Tests\obj\Debug\ne
 P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5_Tests\obj\Debug\net5.0\ref\OGA.InfraBase_NET5_Tests.dll
 P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5_Tests\bin\Debug\net5.0\OGA.InfraBase.dll
 P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5_Tests\bin\Debug\net5.0\OGA.InfraBase.pdb
+P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5_Tests\bin\Debug\net5.0\AutoMapper.dll
+P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5_Tests\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5_Tests\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5_Tests\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5_Tests\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5_Tests\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll

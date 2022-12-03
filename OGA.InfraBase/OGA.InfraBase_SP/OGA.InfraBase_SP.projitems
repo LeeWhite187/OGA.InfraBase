@@ -13,6 +13,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)DataContexts\DataContextAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DataContexts\DataContext_Extensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DataContexts\DbContextExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryHelpers\MappingPaginatedList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QueryHelpers\PaginatedList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Repositories\Repository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\cConfigUpdateService.cs" />
