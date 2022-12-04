@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+ihk0QwjeWEFHKjQ/gZcwv/XPPskfvUzIoQDzyPWjv+Om1gl484qox7oEjO3m4qH6PdMuLHlO0QmBxjNFiW64w==",
+  "dgSpecHash": "gpMI0f5piCeHcTH9mlnbegxQ6Zb5Krx2Ki4p5nrp4ttMqS+4dbZsFJBqp3Y/LwhAu4qo6jXl+pRkZRDaofK4Xw==",
   "success": true,
   "projectFilePath": "P:\\Projects\\OGA.InfraBase gh\\OGA.InfraBase\\OGA.InfraBase_NET5_Tests\\OGA.InfraBase_NET5_Tests.csproj",
   "expectedPackageFiles": [
@@ -51,7 +51,7 @@
     "C:\\Users\\10024642\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\10024642\\.nuget\\packages\\mono.posix.netstandard\\1.0.0\\mono.posix.netstandard.1.0.0.nupkg.sha512",
     "C:\\Users\\10024642\\.nuget\\packages\\mstest.testadapter\\2.2.8\\mstest.testadapter.2.2.8.nupkg.sha512",
-    "C:\\Users\\10024642\\.nuget\\packages\\mstest.testframework\\2.2.8\\mstest.testframework.2.2.8.nupkg.sha512",
+    "C:\\Users\\10024642\\.nuget\\packages\\mstest.testframework\\2.2.10\\mstest.testframework.2.2.10.nupkg.sha512",
     "C:\\Users\\10024642\\.nuget\\packages\\netcore_common\\1.5.9\\netcore_common.1.5.9.nupkg.sha512",
     "C:\\Users\\10024642\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\10024642\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",

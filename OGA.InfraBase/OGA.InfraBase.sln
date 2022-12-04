@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		OGA.InfraBase-RELEASE-NOTES.txt = OGA.InfraBase-RELEASE-NOTES.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OGA.InfraBase_NET6_Tests", "OGA.InfraBase_NET6_Tests\OGA.InfraBase_NET6_Tests.csproj", "{728645D5-BAAF-48F9-80AC-1D371358B62C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{5ABB964D-9C9C-42ED-AB6B-9F098328F050}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ABB964D-9C9C-42ED-AB6B-9F098328F050}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ABB964D-9C9C-42ED-AB6B-9F098328F050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{728645D5-BAAF-48F9-80AC-1D371358B62C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{728645D5-BAAF-48F9-80AC-1D371358B62C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{728645D5-BAAF-48F9-80AC-1D371358B62C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{728645D5-BAAF-48F9-80AC-1D371358B62C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
