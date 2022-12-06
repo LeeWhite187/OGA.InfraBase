@@ -37,6 +37,28 @@ namespace OGA.InfraBase.DataContexts
             OGA.SharedKernel.Logging_Base.Logger_Ref?.Info("cDBDContext_Base:DataContext - completed.");
         }
 
+#if NET6_0
+        // NOTE: This convention converter is only available in EF6 and forward.
+        // So, EF5 usage will require individual value converters for each DateTime property in the model builder logic of each entity.
+
+
+        /// <summary>
+        /// This was added to globally retrieve all stored DateTime properties with their UTC flag set.
+        /// If your implementation of classes has a mix of UTC and local time properties, you will need to be
+        /// more surgical, and use individual value converters instead of this override.
+        /// If this is the case, comment out this method, and assign individual value converters in the appropriate model builder instances.
+        /// See this usage wiki: https://oga.atlassian.net/wiki/spaces/~311198967/pages/66322433/EF+Working+with+DateTime
+        /// </summary>
+        /// <param name="configurationBuilder"></param>
+        protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+        {
+            configurationBuilder
+                .Properties<DateTime>()
+                .HaveConversion<DateTimeUTCConverter>();
+        }
+
+#endif
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Iterate all assemblies, and search for types that implement IEntityTypeConfiguration, and register each one.
