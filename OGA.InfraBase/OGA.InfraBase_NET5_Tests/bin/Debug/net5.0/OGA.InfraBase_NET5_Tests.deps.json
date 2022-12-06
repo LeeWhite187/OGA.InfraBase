@@ -9,7 +9,7 @@
       "OGA.InfraBase_NET5_Tests/1.0.0": {
         "dependencies": {
           "MSTest.TestAdapter": "2.2.8",
-          "MSTest.TestFramework": "2.2.8",
+          "MSTest.TestFramework": "2.2.10",
           "Microsoft.EntityFrameworkCore.InMemory": "5.0.17",
           "Microsoft.NET.Test.Sdk": "17.1.0",
           "NETCore_Common": "1.5.9",
@@ -17,7 +17,8 @@
           "OGA.DomainBase": "2.0.7",
           "OGA.InfraBase": "2.1.13",
           "OGA.SharedKernel": "1.5.2",
-          "coverlet.collector": "3.1.2"
+          "coverlet.collector": "3.1.2",
+          "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions": "14.0.0.0"
         },
         "runtime": {
           "OGA.InfraBase_NET5_Tests.dll": {}
@@ -715,19 +716,11 @@
           "System.Diagnostics.TextWriterTraceListener": "4.3.0"
         }
       },
-      "MSTest.TestFramework/2.2.8": {
-        "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.Diagnostics.TextWriterTraceListener": "4.3.0"
-        },
+      "MSTest.TestFramework/2.2.10": {
         "runtime": {
-          "lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll": {
+          "lib/net5.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll": {
             "assemblyVersion": "14.0.0.0",
-            "fileVersion": "14.0.6623.13"
-          },
-          "lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll": {
-            "assemblyVersion": "14.0.0.0",
-            "fileVersion": "14.0.6623.13"
+            "fileVersion": "14.0.7126.11"
           }
         }
       },
@@ -1663,6 +1656,14 @@
         "runtime": {
           "OGA.InfraBase.dll": {}
         }
+      },
+      "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions/14.0.0.0": {
+        "runtime": {
+          "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll": {
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "14.0.7126.11"
+          }
+        }
       }
     }
   },
@@ -2001,12 +2002,12 @@
       "path": "mstest.testadapter/2.2.8",
       "hashPath": "mstest.testadapter.2.2.8.nupkg.sha512"
     },
-    "MSTest.TestFramework/2.2.8": {
+    "MSTest.TestFramework/2.2.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-phUoHuGTuw9T5yekxPHLLLq8jE56yufmh2yPlJq1IfkT4a3tYZ2htkeTlnQmzmJP3hI5xYhlqwiHcy3JqVt/OA==",
-      "path": "mstest.testframework/2.2.8",
-      "hashPath": "mstest.testframework.2.2.8.nupkg.sha512"
+      "sha512": "sha512-JZRVXKq19uRhkj8MuzsU8zJhPV2JV3ZToFPAIg+BU53L1L9mNDfm9jXerdRfbrE4HBcf2M54Ij80zPOdlha3+Q==",
+      "path": "mstest.testframework/2.2.10",
+      "hashPath": "mstest.testframework.2.2.10.nupkg.sha512"
     },
     "NETCore_Common/1.5.9": {
       "type": "package",
@@ -2675,6 +2676,11 @@
     },
     "OGA.InfraBase/2.1.13": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions/14.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

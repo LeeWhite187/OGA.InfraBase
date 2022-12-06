@@ -145,3 +145,4 @@ P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5_Tests\obj\Debug\ne
 P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5_Tests\obj\Debug\net5.0\OGA.InfraBase_NET5_Tests.pdb
 P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5_Tests\obj\Debug\net5.0\OGA.InfraBase_NET5_Tests.genruntimeconfig.cache
 P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5_Tests\obj\Debug\net5.0\ref\OGA.InfraBase_NET5_Tests.dll
+P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET5_Tests\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
