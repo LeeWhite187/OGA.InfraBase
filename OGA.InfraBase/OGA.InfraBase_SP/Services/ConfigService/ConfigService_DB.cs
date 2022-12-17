@@ -7,32 +7,24 @@ using System.Threading.Tasks;
 
 namespace OGA.InfraBase.Services
 {
-    public interface IDBConfigService
+    /// <summary>
+    /// Configuration Service Class with an EF-based backing store.
+    /// This class .
+    /// It can also be used for testing other services
+    /// </summary>
+    public class ConfigService_DB : IConfigService
     {
-        IEnumerable<OGA.DomainBase.Entities.ConfigElement_v1> GetAll();
+        static private string _classname = typeof(ConfigService_Mem).Name;
 
-        int GetbyKey(string key, out bool val);
-        int GetbyKey(string key, out int val);
-        int GetbyKey(string key, out float val);
-        int GetbyKey(string key, out string val);
-        int GetbyKey(string key, out DateTime val);
-
-        int SetValue(string key, bool val);
-        int SetValue(string key, int val);
-        int SetValue(string key, float val);
-        int SetValue(string key, string val);
-        int SetValue(string key, DateTime val);
-
-        void Delete(string key);
-
-        int Set_Defaults();
-    }
-
-    public class cDBConfigService_Base : IDBConfigService
-    {
         private OGA.InfraBase.DataContexts.cDBDContext_Base _context;
 
-        public cDBConfigService_Base(OGA.InfraBase.DataContexts.cDBDContext_Base context)
+        /// <summary>
+        /// Returns the type of backing store: file, memory, database, REST, etc...
+        /// </summary>
+        public string ProviderType { get => "database"; }
+
+
+        public ConfigService_DB(OGA.InfraBase.DataContexts.cDBDContext_Base context)
         {
             _context = context;
         }
@@ -76,7 +68,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception e)
             {
-                NETCore_Common.Logging.Logging.Logger_Ref?.Error(e, nameof(cDBConfigService_Base) + ":" + nameof(GetbyKey) + " - " +
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(e, $"{_classname}:{nameof(GetbyKey)} - " +
                         "encountered an exception.");
 
                 val = false;
@@ -116,7 +108,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception e)
             {
-                NETCore_Common.Logging.Logging.Logger_Ref?.Error(e, nameof(cDBConfigService_Base) + ":" + nameof(GetbyKey) + " - " +
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(e, $"{_classname}:{nameof(GetbyKey)} - " +
                         "encountered an exception.");
 
                 val = -9999;
@@ -156,7 +148,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception e)
             {
-                NETCore_Common.Logging.Logging.Logger_Ref?.Error(e, nameof(cDBConfigService_Base) + ":" + nameof(GetbyKey) + " - " +
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(e, $"{_classname}:{nameof(GetbyKey)} - " +
                         "encountered an exception.");
 
                 val = -9999.0f;
@@ -196,7 +188,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception e)
             {
-                NETCore_Common.Logging.Logging.Logger_Ref?.Error(e, nameof(cDBConfigService_Base) + ":" + nameof(GetbyKey) + " - " +
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(e, $"{_classname}:{nameof(GetbyKey)} - " +
                         "encountered an exception.");
 
                 val = "";
@@ -236,7 +228,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception e)
             {
-                NETCore_Common.Logging.Logging.Logger_Ref?.Error(e, nameof(cDBConfigService_Base) + ":" + nameof(GetbyKey) + " - " +
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(e, $"{_classname}:{nameof(GetbyKey)} - " +
                         "encountered an exception.");
 
                 val = new DateTime();
@@ -278,7 +270,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception e)
             {
-                NETCore_Common.Logging.Logging.Logger_Ref?.Error(e, nameof(cDBConfigService_Base) + ":" + nameof(SetValue) + " - " +
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(e, $"{_classname}:{nameof(SetValue)} - " +
                         "encountered an exception.");
 
                 return -10;
@@ -316,7 +308,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception e)
             {
-                NETCore_Common.Logging.Logging.Logger_Ref?.Error(e, nameof(cDBConfigService_Base) + ":" + nameof(SetValue) + " - " +
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(e, $"{_classname}:{nameof(SetValue)} - " +
                         "encountered an exception.");
 
                 return -10;
@@ -356,7 +348,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception e)
             {
-                NETCore_Common.Logging.Logging.Logger_Ref?.Error(e, nameof(cDBConfigService_Base) + ":" + nameof(SetValue) + " - " +
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(e, $"{_classname}:{nameof(SetValue)} - " +
                         "encountered an exception.");
 
                 return -10;
@@ -396,7 +388,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception e)
             {
-                NETCore_Common.Logging.Logging.Logger_Ref?.Error(e, nameof(cDBConfigService_Base) + ":" + nameof(SetValue) + " - " +
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(e, $"{_classname}:{nameof(SetValue)} - " +
                         "encountered an exception.");
 
                 return -10;
@@ -441,7 +433,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception e)
             {
-                NETCore_Common.Logging.Logging.Logger_Ref?.Error(e, nameof(cDBConfigService_Base) + ":" + nameof(SetValue) + " - " +
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(e, $"{_classname}:{nameof(SetValue)} - " +
                         "encountered an exception.");
 
                 return -10;
@@ -478,7 +470,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception e)
             {
-                NETCore_Common.Logging.Logging.Logger_Ref?.Error(e, nameof(cDBConfigService_Base) + ":" + nameof(Set_Defaults) + " - " +
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(e, $"{_classname}:{nameof(Set_Defaults)} - " +
                         "encountered an exception.");
 
                 return -10;
@@ -512,7 +504,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception e)
             {
-                NETCore_Common.Logging.Logging.Logger_Ref?.Error(e, nameof(cDBConfigService_Base) + ":" + nameof(Delete) + " - " +
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(e, $"{_classname}:{nameof(Delete)} - " +
                         "encountered an exception.");
 
                 return;

@@ -18,7 +18,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)QueryHelpers\PaginatedList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Repositories\Repository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\cConfigUpdateService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\cDBConfigService_Base.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ConfigService\IConfigService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ConfigService\ConfigService_DB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ConfigService\ConfigService_Mem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\UriService.cs" />
   </ItemGroup>
 </Project>

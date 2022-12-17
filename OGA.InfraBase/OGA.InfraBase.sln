@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		OGA.InfraBase-RELEASE-NOTES.txt = OGA.InfraBase-RELEASE-NOTES.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OGA.InfraBase_NET6_Tests", "OGA.InfraBase_NET6_Tests\OGA.InfraBase_NET6_Tests.csproj", "{728645D5-BAAF-48F9-80AC-1D371358B62C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OGA.InfraBase_NET6_Tests", "OGA.InfraBase_NET6_Tests\OGA.InfraBase_NET6_Tests.csproj", "{728645D5-BAAF-48F9-80AC-1D371358B62C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
