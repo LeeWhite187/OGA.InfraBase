@@ -27,7 +27,7 @@ namespace OGA.InfraBase.Services
 
         private readonly NETCore_Common.Config.WriteableJSONConfig.IWritableOptions<OGA.SharedKernel.Config.structs.cConfig_BuildData> _builddata;
 
-        private OGA.InfraBase.Services.IDBConfigService _confsvc;
+        private OGA.InfraBase.Services.IConfigService _confsvc;
 
         #endregion
 
@@ -37,7 +37,7 @@ namespace OGA.InfraBase.Services
         public cConfigUpdateService(
                             NETCore_Common.Config.WriteableJSONConfig.IWritableOptions<OGA.SharedKernel.Config.structs.cConfig_AppPaths> appSettings,
                             NETCore_Common.Config.WriteableJSONConfig.IWritableOptions<OGA.SharedKernel.Config.structs.cConfig_BuildData> builddata,
-                            OGA.InfraBase.Services.IDBConfigService confsvc)
+                            OGA.InfraBase.Services.IConfigService confsvc)
         {
             this._confsvc = confsvc;
 
