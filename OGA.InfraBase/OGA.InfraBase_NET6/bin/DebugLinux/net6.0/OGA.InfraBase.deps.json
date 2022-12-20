@@ -14,9 +14,9 @@
           "Microsoft.EntityFrameworkCore.InMemory": "6.0.9",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.9",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.9",
-          "NETCore_Common": "1.5.9",
-          "OGA.DomainBase": "2.0.7",
-          "OGA.SharedKernel": "1.5.2"
+          "NETCore_Common": "1.6.0",
+          "OGA.DomainBase": "2.0.9",
+          "OGA.SharedKernel": "1.6.2"
         },
         "runtime": {
           "OGA.InfraBase.dll": {}
@@ -455,14 +455,14 @@
           }
         }
       },
-      "NETCore_Common/1.5.9": {
+      "NETCore_Common/1.6.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "6.0.1",
           "Microsoft.Extensions.Hosting.WindowsServices": "6.0.0",
           "Mono.Posix.NETStandard": "1.0.0",
           "NLog.Web.AspNetCore": "5.1.4",
           "Newtonsoft.Json": "13.0.1",
-          "OGA.SharedKernel": "1.5.2",
+          "OGA.SharedKernel": "1.6.2",
           "System.IO.FileSystem": "4.3.0",
           "System.IO.FileSystem.AccessControl": "5.0.0",
           "System.Management": "6.0.0",
@@ -473,14 +473,14 @@
           "runtimes/linux-x64/lib/net6.0/NETCore_Common.dll": {
             "rid": "linux-x64",
             "assetType": "runtime",
-            "assemblyVersion": "1.5.1.9",
-            "fileVersion": "1.5.1.9"
+            "assemblyVersion": "1.6.2.0",
+            "fileVersion": "1.6.2.0"
           },
           "runtimes/win-x64/lib/net6.0/NETCore_Common.dll": {
             "rid": "win-x64",
             "assetType": "runtime",
-            "assemblyVersion": "1.5.1.9",
-            "fileVersion": "1.5.1.9"
+            "assemblyVersion": "1.6.2.0",
+            "fileVersion": "1.6.2.0"
           }
         }
       },
@@ -524,27 +524,27 @@
           }
         }
       },
-      "OGA.DomainBase/2.0.7": {
+      "OGA.DomainBase/2.0.9": {
         "dependencies": {
           "NLog": "5.0.4",
-          "OGA.SharedKernel": "1.5.2"
+          "OGA.SharedKernel": "1.6.2"
         },
         "runtimeTargets": {
           "runtimes/linux-x64/lib/net6.0/OGA.DomainBase.dll": {
             "rid": "linux-x64",
             "assetType": "runtime",
-            "assemblyVersion": "2.0.2.7",
-            "fileVersion": "2.0.2.7"
+            "assemblyVersion": "2.0.4.9",
+            "fileVersion": "2.0.4.9"
           },
           "runtimes/win-x64/lib/net6.0/OGA.DomainBase.dll": {
             "rid": "win-x64",
             "assetType": "runtime",
-            "assemblyVersion": "2.0.2.7",
-            "fileVersion": "2.0.2.7"
+            "assemblyVersion": "2.0.4.9",
+            "fileVersion": "2.0.4.9"
           }
         }
       },
-      "OGA.SharedKernel/1.5.2": {
+      "OGA.SharedKernel/1.6.2": {
         "dependencies": {
           "NLog": "5.0.4"
         },
@@ -552,14 +552,14 @@
           "runtimes/linux-x64/lib/net6.0/OGA.SharedKernel.dll": {
             "rid": "linux-x64",
             "assetType": "runtime",
-            "assemblyVersion": "1.5.59.2",
-            "fileVersion": "1.5.59.2"
+            "assemblyVersion": "1.6.62.2",
+            "fileVersion": "1.6.62.2"
           },
           "runtimes/win-x64/lib/net6.0/OGA.SharedKernel.dll": {
             "rid": "win-x64",
             "assetType": "runtime",
-            "assemblyVersion": "1.5.59.2",
-            "fileVersion": "1.5.59.2"
+            "assemblyVersion": "1.6.62.2",
+            "fileVersion": "1.6.62.2"
           }
         }
       },
@@ -1162,12 +1162,12 @@
       "path": "mono.posix.netstandard/1.0.0",
       "hashPath": "mono.posix.netstandard.1.0.0.nupkg.sha512"
     },
-    "NETCore_Common/1.5.9": {
+    "NETCore_Common/1.6.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3Z5LrWcP4iE8UWvC1ohY6eg5K72StKyK35FRyWZuMRqPlhF8sTQV3y0H9Z+Pnuj0+BSwzfibBMBgfJXKSc42lA==",
-      "path": "netcore_common/1.5.9",
-      "hashPath": "netcore_common.1.5.9.nupkg.sha512"
+      "sha512": "sha512-+xgPo9Kk4kfwsNWPe2ZzCyQjycGlrxAMNDjj540DPdwIQXt4fWnJmZcpluc8u4FkcycCj4fbszPxTW8q61xeiw==",
+      "path": "netcore_common/1.6.0",
+      "hashPath": "netcore_common.1.6.0.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.1": {
       "type": "package",
@@ -1197,19 +1197,19 @@
       "path": "nlog.web.aspnetcore/5.1.4",
       "hashPath": "nlog.web.aspnetcore.5.1.4.nupkg.sha512"
     },
-    "OGA.DomainBase/2.0.7": {
+    "OGA.DomainBase/2.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rCGTsHGNT7spmsjLNqvmH4Eud3rvhQo1mARMKcnR5bbET9bBlfDyuNn1xe5FbGLqGJYGyZ734QejwgJhlolLHQ==",
-      "path": "oga.domainbase/2.0.7",
-      "hashPath": "oga.domainbase.2.0.7.nupkg.sha512"
+      "sha512": "sha512-pIjk/E5nQvCRE+B3zwGCJWUjSWhyw8LH4yfLBaCX8SbDqvXi8aB5SvLuP3mNUCNMKohC78Tp7dSeRWtHPlzZcg==",
+      "path": "oga.domainbase/2.0.9",
+      "hashPath": "oga.domainbase.2.0.9.nupkg.sha512"
     },
-    "OGA.SharedKernel/1.5.2": {
+    "OGA.SharedKernel/1.6.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-U8qN3brZZ/64SXLBo18acgNBiiQTEEAC0TXTYirJFveqxMywBl3IxcHhWU1q4ZWMfpAR7iiy2abKeLx6inf/pw==",
-      "path": "oga.sharedkernel/1.5.2",
-      "hashPath": "oga.sharedkernel.1.5.2.nupkg.sha512"
+      "sha512": "sha512-1zH+b5JsiqFYof2dcZ93SjWZ7YgREssa6Y2XulOsHIdJ4USKgc2HYZ4l8nWWwTv3ERidZMauRkmJ+BTircg+WA==",
+      "path": "oga.sharedkernel/1.6.2",
+      "hashPath": "oga.sharedkernel.1.6.2.nupkg.sha512"
     },
     "runtime.native.System/4.3.0": {
       "type": "package",

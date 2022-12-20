@@ -55,7 +55,7 @@ namespace OGA.InfraBase.Services
             {
                 return Convert.ToInt32(this._builddata.Value.Source_Revision);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return -9999;
             }

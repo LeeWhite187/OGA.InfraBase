@@ -78,15 +78,15 @@
             },
             "NETCore_Common": {
               "target": "Package",
-              "version": "[1.5.9, )"
+              "version": "[1.6.0, )"
             },
             "OGA.DomainBase": {
               "target": "Package",
-              "version": "[2.0.7, )"
+              "version": "[2.0.9, )"
             },
             "OGA.SharedKernel": {
               "target": "Package",
-              "version": "[1.5.2, )"
+              "version": "[1.6.2, )"
             }
           },
           "imports": [
@@ -171,7 +171,7 @@
             },
             "NETCore_Common": {
               "target": "Package",
-              "version": "[1.5.9, )"
+              "version": "[1.6.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -179,11 +179,11 @@
             },
             "OGA.DomainBase": {
               "target": "Package",
-              "version": "[2.0.7, )"
+              "version": "[2.0.9, )"
             },
             "OGA.SharedKernel": {
               "target": "Package",
-              "version": "[1.5.2, )"
+              "version": "[1.6.2, )"
             },
             "coverlet.collector": {
               "target": "Package",

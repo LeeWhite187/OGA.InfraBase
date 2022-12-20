@@ -1096,7 +1096,7 @@
           "build/net5.0/MSTest.TestFramework.targets": {}
         }
       },
-      "NETCore_Common/1.5.9": {
+      "NETCore_Common/1.6.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "6.0.1",
@@ -1104,7 +1104,7 @@
           "Mono.Posix.NETStandard": "1.0.0",
           "NLog.Web.AspNetCore": "5.1.4",
           "Newtonsoft.Json": "13.0.1",
-          "OGA.SharedKernel": "1.5.2",
+          "OGA.SharedKernel": "1.6.2",
           "System.IO.FileSystem": "4.3.0",
           "System.IO.FileSystem.AccessControl": "5.0.0",
           "System.Management": "6.0.0",
@@ -1250,11 +1250,11 @@
           }
         }
       },
-      "OGA.DomainBase/2.0.7": {
+      "OGA.DomainBase/2.0.9": {
         "type": "package",
         "dependencies": {
           "NLog": "5.0.4",
-          "OGA.SharedKernel": "1.5.2"
+          "OGA.SharedKernel": "1.6.2"
         },
         "compile": {
           "ref/net6.0/OGA.DomainBase.dll": {}
@@ -1270,7 +1270,7 @@
           }
         }
       },
-      "OGA.SharedKernel/1.5.2": {
+      "OGA.SharedKernel/1.6.2": {
         "type": "package",
         "dependencies": {
           "NLog": "5.0.4"
@@ -2900,9 +2900,9 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "6.0.9",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.9",
-          "NETCore_Common": "1.5.9",
-          "OGA.DomainBase": "2.0.7",
-          "OGA.SharedKernel": "1.5.2"
+          "NETCore_Common": "1.6.0",
+          "OGA.DomainBase": "2.0.9",
+          "OGA.SharedKernel": "1.6.2"
         },
         "compile": {
           "bin/placeholder/OGA.InfraBase.dll": {}
@@ -4743,13 +4743,13 @@
         "mstest.testframework.nuspec"
       ]
     },
-    "NETCore_Common/1.5.9": {
-      "sha512": "3Z5LrWcP4iE8UWvC1ohY6eg5K72StKyK35FRyWZuMRqPlhF8sTQV3y0H9Z+Pnuj0+BSwzfibBMBgfJXKSc42lA==",
+    "NETCore_Common/1.6.0": {
+      "sha512": "+xgPo9Kk4kfwsNWPe2ZzCyQjycGlrxAMNDjj540DPdwIQXt4fWnJmZcpluc8u4FkcycCj4fbszPxTW8q61xeiw==",
       "type": "package",
-      "path": "netcore_common/1.5.9",
+      "path": "netcore_common/1.6.0",
       "files": [
         ".nupkg.metadata",
-        "netcore_common.1.5.9.nupkg.sha512",
+        "netcore_common.1.6.0.nupkg.sha512",
         "netcore_common.nuspec",
         "ref/net5.0/NETCore_Common.dll",
         "ref/net6.0/NETCore_Common.dll",
@@ -4886,13 +4886,13 @@
         "nuget.frameworks.nuspec"
       ]
     },
-    "OGA.DomainBase/2.0.7": {
-      "sha512": "rCGTsHGNT7spmsjLNqvmH4Eud3rvhQo1mARMKcnR5bbET9bBlfDyuNn1xe5FbGLqGJYGyZ734QejwgJhlolLHQ==",
+    "OGA.DomainBase/2.0.9": {
+      "sha512": "pIjk/E5nQvCRE+B3zwGCJWUjSWhyw8LH4yfLBaCX8SbDqvXi8aB5SvLuP3mNUCNMKohC78Tp7dSeRWtHPlzZcg==",
       "type": "package",
-      "path": "oga.domainbase/2.0.7",
+      "path": "oga.domainbase/2.0.9",
       "files": [
         ".nupkg.metadata",
-        "oga.domainbase.2.0.7.nupkg.sha512",
+        "oga.domainbase.2.0.9.nupkg.sha512",
         "oga.domainbase.nuspec",
         "ref/net5.0/OGA.DomainBase.dll",
         "ref/net6.0/OGA.DomainBase.dll",
@@ -4902,13 +4902,13 @@
         "runtimes/win-x64/lib/net6.0/OGA.DomainBase.dll"
       ]
     },
-    "OGA.SharedKernel/1.5.2": {
-      "sha512": "U8qN3brZZ/64SXLBo18acgNBiiQTEEAC0TXTYirJFveqxMywBl3IxcHhWU1q4ZWMfpAR7iiy2abKeLx6inf/pw==",
+    "OGA.SharedKernel/1.6.2": {
+      "sha512": "1zH+b5JsiqFYof2dcZ93SjWZ7YgREssa6Y2XulOsHIdJ4USKgc2HYZ4l8nWWwTv3ERidZMauRkmJ+BTircg+WA==",
       "type": "package",
-      "path": "oga.sharedkernel/1.5.2",
+      "path": "oga.sharedkernel/1.6.2",
       "files": [
         ".nupkg.metadata",
-        "oga.sharedkernel.1.5.2.nupkg.sha512",
+        "oga.sharedkernel.1.6.2.nupkg.sha512",
         "oga.sharedkernel.nuspec",
         "ref/net452/OGA.SharedKernel.dll",
         "ref/net47/OGA.SharedKernel.dll",
@@ -8803,11 +8803,11 @@
       "MSTest.TestAdapter >= 2.2.8",
       "MSTest.TestFramework >= 2.2.10",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
-      "NETCore_Common >= 1.5.9",
+      "NETCore_Common >= 1.6.0",
       "Newtonsoft.Json >= 13.0.1",
-      "OGA.DomainBase >= 2.0.7",
+      "OGA.DomainBase >= 2.0.9",
       "OGA.InfraBase >= 2.1.13",
-      "OGA.SharedKernel >= 1.5.2",
+      "OGA.SharedKernel >= 1.6.2",
       "coverlet.collector >= 3.1.2"
     ]
   },
@@ -8878,7 +8878,7 @@
           },
           "NETCore_Common": {
             "target": "Package",
-            "version": "[1.5.9, )"
+            "version": "[1.6.0, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",
@@ -8886,11 +8886,11 @@
           },
           "OGA.DomainBase": {
             "target": "Package",
-            "version": "[2.0.7, )"
+            "version": "[2.0.9, )"
           },
           "OGA.SharedKernel": {
             "target": "Package",
-            "version": "[1.5.2, )"
+            "version": "[1.6.2, )"
           },
           "coverlet.collector": {
             "target": "Package",

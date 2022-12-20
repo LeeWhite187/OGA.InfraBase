@@ -100,7 +100,7 @@ namespace OGA.InfraBase.Services
                     val = Convert.ToInt32(ce.Value);
                     return 1;
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     val = -9999;
                     return -1;
@@ -140,7 +140,7 @@ namespace OGA.InfraBase.Services
                     val = Convert.ToSingle(ce.Value);
                     return 1;
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     val = -9999.0f;
                     return -1;
@@ -180,7 +180,7 @@ namespace OGA.InfraBase.Services
                     val = ce.Value;
                     return 1;
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     val = "";
                     return -1;
@@ -220,7 +220,7 @@ namespace OGA.InfraBase.Services
                     val = DateTime.Parse(ce.Value, CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind);
                     return 1;
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     val = new DateTime();
                     return -1;

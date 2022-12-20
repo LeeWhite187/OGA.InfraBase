@@ -32,7 +32,7 @@ namespace OGA.DomainBase.Repositories
                 _dbSet.Add(entity);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -45,7 +45,7 @@ namespace OGA.DomainBase.Repositories
                 await _dbSet.AddAsync(entity);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -58,7 +58,7 @@ namespace OGA.DomainBase.Repositories
                 await _dbSet.AddRangeAsync(entities);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -85,7 +85,7 @@ namespace OGA.DomainBase.Repositories
                 _dbSet.Remove(inst);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -97,7 +97,7 @@ namespace OGA.DomainBase.Repositories
                 _dbSet.Remove(entity);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -110,7 +110,7 @@ namespace OGA.DomainBase.Repositories
                 _dbSet.RemoveRange(entities);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -129,7 +129,7 @@ namespace OGA.DomainBase.Repositories
                 _dbSet.Update(entity);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -156,7 +156,7 @@ namespace OGA.DomainBase.Repositories
                 // Update the existing entity...
                 return Update(entity);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -183,7 +183,7 @@ namespace OGA.DomainBase.Repositories
             {
                 return _dbSet.ToList();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return new List<TEntity>();
             }
@@ -195,7 +195,7 @@ namespace OGA.DomainBase.Repositories
             {
                 return await _dbSet.ToListAsync().ConfigureAwait(false);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return new List<TEntity>();
             }
