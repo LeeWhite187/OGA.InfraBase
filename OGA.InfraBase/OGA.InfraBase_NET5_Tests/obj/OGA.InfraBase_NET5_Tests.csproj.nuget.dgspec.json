@@ -74,7 +74,7 @@
             },
             "NETCore_Common": {
               "target": "Package",
-              "version": "[1.6.0, )"
+              "version": "[1.7.0, )"
             },
             "OGA.DomainBase": {
               "target": "Package",
@@ -171,7 +171,7 @@
             },
             "NETCore_Common": {
               "target": "Package",
-              "version": "[1.6.0, )"
+              "version": "[1.7.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

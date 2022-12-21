@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JcDb2Tj2XkccIpGniCFT8N51YmlepnTOGce8qV8ZBB1jXRtXCHtbUFEs2JJuxU6y00PoUwwW7YGevi6q20CjlQ==",
+  "dgSpecHash": "57XAPhGSSoe92tjYfwjuUO7bdRQ0+rzUSsdAbZxm4ToPSGANdKDYxVg11CKtQqUfU1ql0W1VI388ocYAVFMa8A==",
   "success": true,
   "projectFilePath": "P:\\Projects\\OGA.InfraBase gh\\OGA.InfraBase\\OGA.InfraBase_NET5\\OGA.InfraBase_NET5.csproj",
   "expectedPackageFiles": [
@@ -47,7 +47,7 @@
     "C:\\Users\\10024642\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\10024642\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\10024642\\.nuget\\packages\\mono.posix.netstandard\\1.0.0\\mono.posix.netstandard.1.0.0.nupkg.sha512",
-    "C:\\Users\\10024642\\.nuget\\packages\\netcore_common\\1.6.0\\netcore_common.1.6.0.nupkg.sha512",
+    "C:\\Users\\10024642\\.nuget\\packages\\netcore_common\\1.7.0\\netcore_common.1.7.0.nupkg.sha512",
     "C:\\Users\\10024642\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\10024642\\.nuget\\packages\\nlog\\5.0.4\\nlog.5.0.4.nupkg.sha512",
     "C:\\Users\\10024642\\.nuget\\packages\\nlog.extensions.logging\\5.0.4\\nlog.extensions.logging.5.0.4.nupkg.sha512",
