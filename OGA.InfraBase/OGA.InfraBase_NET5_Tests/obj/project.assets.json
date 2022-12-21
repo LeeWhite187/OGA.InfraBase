@@ -1089,7 +1089,7 @@
           "build/net5.0/MSTest.TestFramework.targets": {}
         }
       },
-      "NETCore_Common/1.7.0": {
+      "NETCore_Common/1.8.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "5.0.0",
@@ -2839,7 +2839,7 @@
           "AutoMapper": "12.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.17",
-          "NETCore_Common": "1.7.0",
+          "NETCore_Common": "1.8.0",
           "OGA.DomainBase": "2.0.9",
           "OGA.SharedKernel": "1.6.2"
         },
@@ -4685,13 +4685,13 @@
         "mstest.testframework.nuspec"
       ]
     },
-    "NETCore_Common/1.7.0": {
-      "sha512": "8SjtAG8vBvyh2TEMplvNS1EWoTzT6JQOy62mC0Xdgrl4RB/fIiKvYzediWytmoWpo6bffEnAZIqghDfvAzdJXA==",
+    "NETCore_Common/1.8.0": {
+      "sha512": "VufIVdSUUDKLqJHPiK223iFl3wlTtaInEFwZXl7oGG9GoQxt27NyQTXm/ndkcYQ8w36ppYNajKZUN2lDwwTk6Q==",
       "type": "package",
-      "path": "netcore_common/1.7.0",
+      "path": "netcore_common/1.8.0",
       "files": [
         ".nupkg.metadata",
-        "netcore_common.1.7.0.nupkg.sha512",
+        "netcore_common.1.8.0.nupkg.sha512",
         "netcore_common.nuspec",
         "ref/net5.0/NETCore_Common.dll",
         "ref/net6.0/NETCore_Common.dll",
@@ -8762,7 +8762,7 @@
       "MSTest.TestFramework >= 2.2.10",
       "Microsoft.EntityFrameworkCore.InMemory >= 5.0.17",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
-      "NETCore_Common >= 1.7.0",
+      "NETCore_Common >= 1.8.0",
       "Newtonsoft.Json >= 13.0.1",
       "OGA.DomainBase >= 2.0.9",
       "OGA.InfraBase >= 2.1.13",
@@ -8841,7 +8841,7 @@
           },
           "NETCore_Common": {
             "target": "Package",
-            "version": "[1.7.0, )"
+            "version": "[1.8.0, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",
