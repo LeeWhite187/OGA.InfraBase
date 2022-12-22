@@ -11,7 +11,7 @@
           "MSTest.TestAdapter": "2.2.8",
           "MSTest.TestFramework": "2.2.10",
           "Microsoft.NET.Test.Sdk": "17.1.0",
-          "NETCore_Common": "1.8.0",
+          "NETCore_Common": "1.9.0",
           "Newtonsoft.Json": "13.0.1",
           "OGA.DomainBase": "2.0.9",
           "OGA.InfraBase": "2.1.13",
@@ -707,7 +707,7 @@
           }
         }
       },
-      "NETCore_Common/1.8.0": {
+      "NETCore_Common/1.9.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "6.0.1",
           "Microsoft.Extensions.Hosting.WindowsServices": "6.0.0",
@@ -725,14 +725,14 @@
           "runtimes/linux-x64/lib/net6.0/NETCore_Common.dll": {
             "rid": "linux-x64",
             "assetType": "runtime",
-            "assemblyVersion": "1.8.4.0",
-            "fileVersion": "1.8.4.0"
+            "assemblyVersion": "1.9.6.0",
+            "fileVersion": "1.9.6.0"
           },
           "runtimes/win-x64/lib/net6.0/NETCore_Common.dll": {
             "rid": "win-x64",
             "assetType": "runtime",
-            "assemblyVersion": "1.8.4.0",
-            "fileVersion": "1.8.4.0"
+            "assemblyVersion": "1.9.6.0",
+            "fileVersion": "1.9.6.0"
           }
         }
       },
@@ -1629,7 +1629,7 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "6.0.9",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.9",
-          "NETCore_Common": "1.8.0",
+          "NETCore_Common": "1.9.0",
           "OGA.DomainBase": "2.0.9",
           "OGA.SharedKernel": "1.6.2"
         },
@@ -1982,12 +1982,12 @@
       "path": "mstest.testframework/2.2.10",
       "hashPath": "mstest.testframework.2.2.10.nupkg.sha512"
     },
-    "NETCore_Common/1.8.0": {
+    "NETCore_Common/1.9.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VufIVdSUUDKLqJHPiK223iFl3wlTtaInEFwZXl7oGG9GoQxt27NyQTXm/ndkcYQ8w36ppYNajKZUN2lDwwTk6Q==",
-      "path": "netcore_common/1.8.0",
-      "hashPath": "netcore_common.1.8.0.nupkg.sha512"
+      "sha512": "sha512-KaXvBjuz+V0KRMQVdiYSS7VMJ0jDA3f1iv/8oO9FFvyIIXT+I+Z6C/MOIVie1gYA+lXT1CcyqRRFVCkwYli9Qw==",
+      "path": "netcore_common/1.9.0",
+      "hashPath": "netcore_common.1.9.0.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",
