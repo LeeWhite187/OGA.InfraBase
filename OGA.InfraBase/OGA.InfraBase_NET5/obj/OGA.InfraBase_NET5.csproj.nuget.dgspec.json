@@ -74,7 +74,7 @@
             },
             "NETCore_Common": {
               "target": "Package",
-              "version": "[1.9.0, )"
+              "version": "[1.10.0, )"
             },
             "OGA.DomainBase": {
               "target": "Package",

@@ -826,7 +826,7 @@
           }
         }
       },
-      "NETCore_Common/1.9.0": {
+      "NETCore_Common/1.10.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "6.0.1",
@@ -2569,13 +2569,13 @@
         "runtimes/win-x86/native/libMonoPosixHelper.dll"
       ]
     },
-    "NETCore_Common/1.9.0": {
-      "sha512": "KaXvBjuz+V0KRMQVdiYSS7VMJ0jDA3f1iv/8oO9FFvyIIXT+I+Z6C/MOIVie1gYA+lXT1CcyqRRFVCkwYli9Qw==",
+    "NETCore_Common/1.10.0": {
+      "sha512": "UmmOkiuXsyrqhMKbkNEFaODQMoeSMFwt5sF8iPYI7T49MTv48NQ8G9Zl20huk0o+KJH4RN5x1xR8nONvJO8mEw==",
       "type": "package",
-      "path": "netcore_common/1.9.0",
+      "path": "netcore_common/1.10.0",
       "files": [
         ".nupkg.metadata",
-        "netcore_common.1.9.0.nupkg.sha512",
+        "netcore_common.1.10.0.nupkg.sha512",
         "netcore_common.nuspec",
         "ref/net5.0/NETCore_Common.dll",
         "ref/net6.0/NETCore_Common.dll",
@@ -4689,7 +4689,7 @@
       "Microsoft.EntityFrameworkCore.InMemory >= 6.0.9",
       "Microsoft.EntityFrameworkCore.Relational >= 6.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.9",
-      "NETCore_Common >= 1.9.0",
+      "NETCore_Common >= 1.10.0",
       "OGA.DomainBase >= 2.0.9",
       "OGA.SharedKernel >= 1.6.2"
     ]
@@ -4773,7 +4773,7 @@
           },
           "NETCore_Common": {
             "target": "Package",
-            "version": "[1.9.0, )"
+            "version": "[1.10.0, )"
           },
           "OGA.DomainBase": {
             "target": "Package",
