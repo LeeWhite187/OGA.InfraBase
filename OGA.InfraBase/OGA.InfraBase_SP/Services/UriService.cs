@@ -8,6 +8,9 @@ using System.Web;
 
 namespace OGA.InfraBase.Services
 {
+    /// <summary>
+    /// Implementation of the URI Service (interface) found in OGA.SharedKernel.
+    /// </summary>
     public class UriService :  OGA.SharedKernel.Services.IUriService
     {
         private readonly string _baseUri;

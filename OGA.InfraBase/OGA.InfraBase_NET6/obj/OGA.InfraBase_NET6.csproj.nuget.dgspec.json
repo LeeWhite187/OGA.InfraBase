@@ -1,28 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "P:\\Projects\\OGA.InfraBase gh\\OGA.InfraBase\\OGA.InfraBase_NET6\\OGA.InfraBase_NET6.csproj": {}
+    "C:\\Projects\\OGA.InfraBase gh\\OGA.InfraBase\\OGA.InfraBase_NET6\\OGA.InfraBase_NET6.csproj": {}
   },
   "projects": {
-    "P:\\Projects\\OGA.InfraBase gh\\OGA.InfraBase\\OGA.InfraBase_NET6\\OGA.InfraBase_NET6.csproj": {
+    "C:\\Projects\\OGA.InfraBase gh\\OGA.InfraBase\\OGA.InfraBase_NET6\\OGA.InfraBase_NET6.csproj": {
       "version": "2.1.13",
       "restore": {
-        "projectUniqueName": "P:\\Projects\\OGA.InfraBase gh\\OGA.InfraBase\\OGA.InfraBase_NET6\\OGA.InfraBase_NET6.csproj",
+        "projectUniqueName": "C:\\Projects\\OGA.InfraBase gh\\OGA.InfraBase\\OGA.InfraBase_NET6\\OGA.InfraBase_NET6.csproj",
         "projectName": "OGA.InfraBase",
-        "projectPath": "P:\\Projects\\OGA.InfraBase gh\\OGA.InfraBase\\OGA.InfraBase_NET6\\OGA.InfraBase_NET6.csproj",
-        "packagesPath": "C:\\Users\\10024642\\.nuget\\packages\\",
-        "outputPath": "P:\\Projects\\OGA.InfraBase gh\\OGA.InfraBase\\OGA.InfraBase_NET6\\obj\\",
+        "projectPath": "C:\\Projects\\OGA.InfraBase gh\\OGA.InfraBase\\OGA.InfraBase_NET6\\OGA.InfraBase_NET6.csproj",
+        "packagesPath": "C:\\Users\\glwhite\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\OGA.InfraBase gh\\OGA.InfraBase\\OGA.InfraBase_NET6\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "P:\\Projects\\OGA.InfraBase gh\\OGA.InfraBase\\NuGet.Config",
-          "C:\\Users\\10024642\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Projects\\OGA.InfraBase gh\\OGA.InfraBase\\NuGet.Config",
+          "C:\\Users\\glwhite\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -78,15 +76,19 @@
             },
             "NETCore_Common": {
               "target": "Package",
-              "version": "[1.10.0, )"
+              "version": "[2.0.0, )"
+            },
+            "OGA.AppSettings.Writeable": {
+              "target": "Package",
+              "version": "[1.5.1, )"
             },
             "OGA.DomainBase": {
               "target": "Package",
-              "version": "[2.0.9, )"
+              "version": "[2.0.22, )"
             },
             "OGA.SharedKernel": {
               "target": "Package",
-              "version": "[1.6.2, )"
+              "version": "[2.1.0, )"
             }
           },
           "imports": [
@@ -105,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

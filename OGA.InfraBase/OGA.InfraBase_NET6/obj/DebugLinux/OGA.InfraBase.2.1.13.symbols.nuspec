@@ -193,13 +193,14 @@ This version was incremented to test the nuget pipeline.</releaseNotes>
         <dependency id="AutoMapper.Extensions.Microsoft.DependencyInjection" version="12.0.0" exclude="Build,Analyzers" />
         <dependency id="Microsoft.EntityFrameworkCore.InMemory" version="6.0.9" exclude="Build,Analyzers" />
         <dependency id="Microsoft.EntityFrameworkCore.Relational" version="6.0.9" exclude="Build,Analyzers" />
-        <dependency id="NETCore_Common" version="1.10.0" exclude="Build,Analyzers" />
-        <dependency id="OGA.DomainBase" version="2.0.9" exclude="Build,Analyzers" />
-        <dependency id="OGA.SharedKernel" version="1.6.2" exclude="Build,Analyzers" />
+        <dependency id="NETCore_Common" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="OGA.AppSettings.Writeable" version="1.5.1" exclude="Build,Analyzers" />
+        <dependency id="OGA.DomainBase" version="2.0.22" exclude="Build,Analyzers" />
+        <dependency id="OGA.SharedKernel" version="2.1.0" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="P:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET6\bin\DebugLinux\net6.0\OGA.InfraBase.pdb" target="lib\net6.0\OGA.InfraBase.pdb" />
+    <file src="C:\Projects\OGA.InfraBase gh\OGA.InfraBase\OGA.InfraBase_NET6\bin\DebugLinux\net6.0\OGA.InfraBase.pdb" target="lib\net6.0\OGA.InfraBase.pdb" />
   </files>
 </package>

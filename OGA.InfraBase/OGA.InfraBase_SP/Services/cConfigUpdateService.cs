@@ -23,9 +23,9 @@ namespace OGA.InfraBase.Services
     {
         #region Private Fields
 
-        private readonly NETCore_Common.Config.WriteableJSONConfig.IWritableOptions<OGA.SharedKernel.Config.structs.cConfig_AppPaths> _appSettings;
+        private readonly OGA.AppSettings.Writeable.JSONConfig.IWritableOptions<OGA.SharedKernel.Config.structs.Config_AppPaths_v2> _appSettings;
 
-        private readonly NETCore_Common.Config.WriteableJSONConfig.IWritableOptions<OGA.SharedKernel.Config.structs.cConfig_BuildData> _builddata;
+        private readonly OGA.AppSettings.Writeable.JSONConfig.IWritableOptions<OGA.SharedKernel.Config.structs.Config_BuildData> _builddata;
 
         private OGA.InfraBase.Services.IConfigService _confsvc;
 
@@ -35,8 +35,8 @@ namespace OGA.InfraBase.Services
         #region ctor / dtor
 
         public cConfigUpdateService(
-                            NETCore_Common.Config.WriteableJSONConfig.IWritableOptions<OGA.SharedKernel.Config.structs.cConfig_AppPaths> appSettings,
-                            NETCore_Common.Config.WriteableJSONConfig.IWritableOptions<OGA.SharedKernel.Config.structs.cConfig_BuildData> builddata,
+                            OGA.AppSettings.Writeable.JSONConfig.IWritableOptions<OGA.SharedKernel.Config.structs.Config_AppPaths_v2> appSettings,
+                            OGA.AppSettings.Writeable.JSONConfig.IWritableOptions<OGA.SharedKernel.Config.structs.Config_BuildData> builddata,
                             OGA.InfraBase.Services.IConfigService confsvc)
         {
             this._confsvc = confsvc;

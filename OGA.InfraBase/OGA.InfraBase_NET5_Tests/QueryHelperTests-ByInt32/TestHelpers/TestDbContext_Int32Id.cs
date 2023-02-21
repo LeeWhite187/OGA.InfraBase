@@ -35,19 +35,19 @@ namespace OGA.DomainBase_Tests
         {
             //var entries = ChangeTracker
             //    .Entries()
-            //    .Where(e => e.Entity is NETCore_Common.Entities.cStorageBaseEntity && (
+            //    .Where(e => e.Entity is OGA.DomainBase.Entities.cStorageBaseEntity && (
             //            e.State == EntityState.Added
             //            || e.State == EntityState.Modified));
 
             //foreach (var entityEntry in entries)
             //{
             //    // Update the changed data for all entries...
-            //    ((NETCore_Common.Entities.cStorageBaseEntity)entityEntry.Entity).ModifiedDateUTC = DateTime.Now.ToUniversalTime();
+            //    ((OGA.DomainBase.Entities.cStorageBaseEntity)entityEntry.Entity).ModifiedDateUTC = DateTime.Now.ToUniversalTime();
 
             //    // Set the creation data for any new entries...
             //    if (entityEntry.State == EntityState.Added)
             //    {
-            //        ((NETCore_Common.Entities.cStorageBaseEntity)entityEntry.Entity).CreationDateUTC = DateTime.Now.ToUniversalTime();
+            //        ((OGA.DomainBase.Entities.cStorageBaseEntity)entityEntry.Entity).CreationDateUTC = DateTime.Now.ToUniversalTime();
             //    }
             //}
 
