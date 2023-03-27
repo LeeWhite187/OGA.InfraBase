@@ -76,19 +76,19 @@
             },
             "NETCore_Common": {
               "target": "Package",
-              "version": "[2.0.0, )"
+              "version": "[2.1.0, )"
             },
             "OGA.AppSettings.Writeable": {
               "target": "Package",
-              "version": "[1.5.1, )"
+              "version": "[1.5.2, )"
             },
             "OGA.DomainBase": {
               "target": "Package",
-              "version": "[2.0.22, )"
+              "version": "[2.0.24, )"
             },
             "OGA.SharedKernel": {
               "target": "Package",
-              "version": "[2.1.0, )"
+              "version": "[2.2.0, )"
             }
           },
           "imports": [
