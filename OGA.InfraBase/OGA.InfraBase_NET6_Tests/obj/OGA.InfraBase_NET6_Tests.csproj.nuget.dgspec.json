@@ -76,7 +76,7 @@
             },
             "NETCore_Common": {
               "target": "Package",
-              "version": "[2.1.0, )"
+              "version": "[2.1.1, )"
             },
             "OGA.AppSettings.Writeable": {
               "target": "Package",
@@ -171,7 +171,7 @@
             },
             "NETCore_Common": {
               "target": "Package",
-              "version": "[2.1.0, )"
+              "version": "[2.1.1, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

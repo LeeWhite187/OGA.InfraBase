@@ -193,7 +193,7 @@ This version was incremented to test the nuget pipeline.</releaseNotes>
         <dependency id="AutoMapper.Extensions.Microsoft.DependencyInjection" version="12.0.0" exclude="Build,Analyzers" />
         <dependency id="Microsoft.EntityFrameworkCore.InMemory" version="6.0.9" exclude="Build,Analyzers" />
         <dependency id="Microsoft.EntityFrameworkCore.Relational" version="6.0.9" exclude="Build,Analyzers" />
-        <dependency id="NETCore_Common" version="2.1.0" exclude="Build,Analyzers" />
+        <dependency id="NETCore_Common" version="2.1.1" exclude="Build,Analyzers" />
         <dependency id="OGA.AppSettings.Writeable" version="1.5.2" exclude="Build,Analyzers" />
         <dependency id="OGA.DomainBase" version="2.0.24" exclude="Build,Analyzers" />
         <dependency id="OGA.SharedKernel" version="2.2.0" exclude="Build,Analyzers" />
