@@ -14,7 +14,7 @@
           "Microsoft.EntityFrameworkCore.InMemory": "6.0.9",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.9",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.9",
-          "NETCore_Common": "2.1.1",
+          "NETCore_Common": "2.2.0",
           "OGA.AppSettings.Writeable": "1.5.2",
           "OGA.DomainBase": "2.0.24",
           "OGA.SharedKernel": "2.2.0"
@@ -456,7 +456,7 @@
           }
         }
       },
-      "NETCore_Common/2.1.1": {
+      "NETCore_Common/2.2.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "6.0.1",
           "Microsoft.Extensions.Hosting.WindowsServices": "6.0.0",
@@ -475,14 +475,14 @@
           "runtimes/linux-x64/lib/net6.0/NETCore_Common.dll": {
             "rid": "linux-x64",
             "assetType": "runtime",
-            "assemblyVersion": "2.1.12.1",
-            "fileVersion": "2.1.12.1"
+            "assemblyVersion": "2.2.15.0",
+            "fileVersion": "2.2.15.0"
           },
           "runtimes/win-x64/lib/net6.0/NETCore_Common.dll": {
             "rid": "win-x64",
             "assetType": "runtime",
-            "assemblyVersion": "2.1.12.1",
-            "fileVersion": "2.1.12.1"
+            "assemblyVersion": "2.2.15.0",
+            "fileVersion": "2.2.15.0"
           }
         }
       },
@@ -1184,12 +1184,12 @@
       "path": "mono.posix.netstandard/1.0.0",
       "hashPath": "mono.posix.netstandard.1.0.0.nupkg.sha512"
     },
-    "NETCore_Common/2.1.1": {
+    "NETCore_Common/2.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-sJG6UI5QNPA/tIRo8SwLbnAkiOj60d51Ntr/fbPvyD7QluYl8rW3i+n+KBbROTV0b6RqDfshg4n47H/+5ttfIA==",
-      "path": "netcore_common/2.1.1",
-      "hashPath": "netcore_common.2.1.1.nupkg.sha512"
+      "sha512": "sha512-ryX2RymjutWfUthfXX6JbPpDQmOL9NW/koLZD2M/BT5jITcJDLUuKjZSTAQ5eIT0bLUnNRR47ZKoBEfKZ3qeJw==",
+      "path": "netcore_common/2.2.0",
+      "hashPath": "netcore_common.2.2.0.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.1": {
       "type": "package",
