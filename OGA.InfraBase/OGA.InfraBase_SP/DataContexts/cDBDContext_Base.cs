@@ -5,6 +5,8 @@ using System;
 using System.Linq;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace OGA.InfraBase.DataContexts
 {
@@ -69,6 +71,29 @@ namespace OGA.InfraBase.DataContexts
             }
 
             base.OnModelCreating(modelBuilder);
+        }
+
+        public override async Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default)
+        {
+            var entries = ChangeTracker
+                .Entries()
+                .Where(e => e.Entity is OGA.DomainBase.Entities.cStorageBaseEntity && (
+                        e.State == EntityState.Added
+                        || e.State == EntityState.Modified));
+
+            foreach (var entityEntry in entries)
+            {
+                // Update the changed data for all entries...
+                ((OGA.DomainBase.Entities.cStorageBaseEntity)entityEntry.Entity).ModifiedDateUTC = DateTime.Now.ToUniversalTime();
+
+                // Set the creation data for any new entries...
+                if (entityEntry.State == EntityState.Added)
+                {
+                    ((OGA.DomainBase.Entities.cStorageBaseEntity)entityEntry.Entity).CreationDateUTC = DateTime.Now.ToUniversalTime();
+                }
+            }
+
+            return await base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
         }
 
         public override int SaveChanges()
