@@ -58,10 +58,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="NETCore_Common" Version="2.3.0" />
+    <PackageReference Include="NETCore_Common" Version="2.4.0" />
     <PackageReference Include="OGA.AppSettings.Writeable" Version="1.5.5" />
     <PackageReference Include="OGA.DomainBase" Version="2.0.26" />
-    <PackageReference Include="OGA.SharedKernel" Version="3.0.1" />
+    <PackageReference Include="OGA.SharedKernel" Version="3.1.0" />
   </ItemGroup>
 
 </Project>
