@@ -34,10 +34,11 @@ namespace OGA.InfraBase.DataContexts
 
     public static class StoreConfigurationExtension
     {
-        public static T GetStoreConfiguration<T>(this OGA.InfraBase.DataContexts.cDBDContext_Base db, string key)
+        public static T? GetStoreConfiguration<T>(this OGA.InfraBase.DataContexts.cDBDContext_Base db, string key)
         {
             var sc = db.Set<OGA.DomainBase.Entities.ConfigElement_v1>().Find(key);
-            if (sc == null) return default(T);
+            if (sc == null)
+                return default(T);
 
             var value = sc.Value;
             var tc = TypeDescriptor.GetConverter(typeof(T));
