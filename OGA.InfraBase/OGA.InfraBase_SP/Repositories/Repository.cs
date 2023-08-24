@@ -23,6 +23,10 @@ namespace OGA.DomainBase.Repositories
             {
                 _dbSet = context.Set<TEntity>();
             }
+            else
+            {
+                throw new Exception("Context is null");
+            }
         }
 
         public virtual bool Add(TEntity entity)
