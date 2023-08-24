@@ -147,23 +147,23 @@ pipeline
 				sh "mono /usr/lib/nuget/nuget.exe pack ./${solutionFolder}/${projectName}.nuspec -IncludeReferencedProjects -symbols -SymbolPackageFormat snupkg -OutputDirectory ./Publish -Verbosity detailed"
            }
 		}
-//        stage('Publish Nuget Package')
-//		{
-//           steps
-//		   {
-//				sh "dotnet nuget push -s http://192.168.1.161:8080/v3/index.json './Publish/${projectName}.${version3}.nupkg'"
-//				sh "dotnet nuget push -s http://192.168.1.161:8080/v3/index.json './Publish/${projectName}.${version3}.snupkg'"
-//           }
-//		}
         stage('Publish Nuget Package')
 		{
            steps
 		   {
-				// This will publish the package to the Azure Artifacts Feed...
-				sh "nuget push -Source 'AzureArtifactsFeed' -ApiKey az './Publish/${projectName}.${version3}.nupkg' -ConfigFile '/projects/config/nuget/NuGet.Config'"
-				sh "nuget push -Source 'AzureArtifactsFeed' -ApiKey az './Publish/${projectName}.${version3}.snupkg' -ConfigFile '/projects/config/nuget/NuGet.Config'"
+				sh "dotnet nuget push -s https://buildtools.ogsofttech.com:8079/v3/index.json './Publish/${projectName}.${version3}.nupkg'"
+				sh "dotnet nuget push -s https://buildtools.ogsofttech.com:8079/v3/index.json './Publish/${projectName}.${version3}.snupkg'"
            }
 		}
+//        stage('Publish Nuget Package')
+//		{
+//           steps
+//		   {
+//				// This will publish the package to the Azure Artifacts Feed...
+//				sh "nuget push -Source 'AzureArtifactsFeed' -ApiKey az './Publish/${projectName}.${version3}.nupkg' -ConfigFile '/projects/config/nuget/NuGet.Config'"
+//				sh "nuget push -Source 'AzureArtifactsFeed' -ApiKey az './Publish/${projectName}.${version3}.snupkg' -ConfigFile '/projects/config/nuget/NuGet.Config'"
+//           }
+//		}
 		stage ('Set New Version Tag')
 		{
             steps
