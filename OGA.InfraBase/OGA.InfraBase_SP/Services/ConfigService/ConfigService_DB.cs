@@ -476,6 +476,10 @@ namespace OGA.InfraBase.Services
                 return -10;
             }
         }
+
+#if NET5_0
+        #nullable enable
+#endif
         protected virtual object? Get_Default(string key)
         {
             return null;

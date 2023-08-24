@@ -1,12 +1,10 @@
-﻿using OGA.DomainBase.Entities;
-using OGA.InfraBase.DataContexts;
-using OGA.SharedKernel;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
+using OGA.DomainBase.Entities;
 
 namespace OGA.InfraBase.Services
 {
@@ -41,10 +39,15 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                if(!_mockdata.TryGetValue(key, out ConfigElement_v1 configElement_v))
+                if(!_mockdata.TryGetValue(key, out ConfigElement_v1? configElement_v))
                 {
                     val = false;
                     return 0;
+                }
+                if (configElement_v == null)
+                {
+                    val = false;
+                    return -1;
                 }
 
                 if (configElement_v.Value.ToLower() == "true")
@@ -63,7 +66,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception exception)
             {
-                Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(GetbyKey)} - encountered an exception.");
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(GetbyKey)} - encountered an exception.");
                 val = false;
                 return -10;
             }
@@ -73,10 +76,15 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                if(!_mockdata.TryGetValue(key, out ConfigElement_v1 configElement_v))
+                if(!_mockdata.TryGetValue(key, out ConfigElement_v1? configElement_v))
                 {
                     val = -9999;
                     return 0;
+                }
+                if (configElement_v == null)
+                {
+                    val = -9999;
+                    return -1;
                 }
 
                 try
@@ -92,7 +100,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception exception)
             {
-                Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(GetbyKey)} - encountered an exception.");
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(GetbyKey)} - encountered an exception.");
                 val = -9999;
                 return -10;
             }
@@ -102,10 +110,15 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                if(!_mockdata.TryGetValue(key, out ConfigElement_v1 configElement_v))
+                if(!_mockdata.TryGetValue(key, out ConfigElement_v1? configElement_v))
                 {
                     val = -9999f;
                     return 0;
+                }
+                if (configElement_v == null)
+                {
+                    val = -9999f;
+                    return -1;
                 }
 
                 try
@@ -121,7 +134,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception exception)
             {
-                Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(GetbyKey)} - encountered an exception.");
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(GetbyKey)} - encountered an exception.");
                 val = -9999f;
                 return -10;
             }
@@ -131,10 +144,15 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                if(!_mockdata.TryGetValue(key, out ConfigElement_v1 configElement_v))
+                if(!_mockdata.TryGetValue(key, out ConfigElement_v1? configElement_v))
                 {
                     val = "";
                     return 0;
+                }
+                if (configElement_v == null)
+                {
+                    val = "";
+                    return -1;
                 }
 
                 try
@@ -150,7 +168,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception exception)
             {
-                Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(GetbyKey)} - encountered an exception.");
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(GetbyKey)} - encountered an exception.");
                 val = "";
                 return -10;
             }
@@ -160,10 +178,15 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                if(!_mockdata.TryGetValue(key, out ConfigElement_v1 configElement_v))
+                if(!_mockdata.TryGetValue(key, out ConfigElement_v1? configElement_v))
                 {
                     val = default(DateTime);
                     return 0;
+                }
+                if (configElement_v == null)
+                {
+                    val = default(DateTime);
+                    return -1;
                 }
 
                 try
@@ -179,7 +202,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception exception)
             {
-                Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(GetbyKey)} - encountered an exception.");
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(GetbyKey)} - encountered an exception.");
                 val = default(DateTime);
                 return -10;
             }
@@ -189,14 +212,24 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                if(!_mockdata.TryGetValue(key, out ConfigElement_v1 configElement_v))
+                if(!_mockdata.TryGetValue(key, out ConfigElement_v1? configElement_v))
                 {
                     configElement_v = new ConfigElement_v1();
                     configElement_v.DataType = "bool";
                     configElement_v.Key = key;
                     configElement_v.Value = val.ToString();
                     _mockdata.Add(key, configElement_v);
+
                     return 1;
+                }
+                // Found it.
+
+                // Verify it's not null...
+                if(configElement_v == null)
+                {
+                    configElement_v = new ConfigElement_v1();
+                    configElement_v.DataType = "bool";
+                    configElement_v.Key = key;
                 }
 
                 configElement_v.Value = val.ToString();
@@ -205,7 +238,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception exception)
             {
-                Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:SetValue - encountered an exception.");
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:SetValue - encountered an exception.");
                 return -10;
             }
         }
@@ -214,25 +247,34 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                if(!_mockdata.TryGetValue(key, out ConfigElement_v1 configElement_v))
+                if(!_mockdata.TryGetValue(key, out ConfigElement_v1? configElement_v))
                 {
                     configElement_v = new ConfigElement_v1();
                     configElement_v.DataType = "int";
                     configElement_v.Key = key;
                     configElement_v.Value = val.ToString();
                     _mockdata.Add(key, configElement_v);
+
+                    return 1;
                 }
-                else
+                // Found it.
+
+                // Verify it's not null...
+                if(configElement_v == null)
                 {
-                    configElement_v.Value = val.ToString();
-                    _mockdata.Add(key, configElement_v);
+                    configElement_v = new ConfigElement_v1();
+                    configElement_v.DataType = "int";
+                    configElement_v.Key = key;
                 }
+
+                configElement_v.Value = val.ToString();
+                _mockdata.Add(key, configElement_v);
 
                 return 1;
             }
             catch (Exception exception)
             {
-                Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(SetValue)} - encountered an exception.");
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(SetValue)} - encountered an exception.");
                 return -10;
             }
         }
@@ -241,7 +283,7 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                if(!_mockdata.TryGetValue(key, out ConfigElement_v1 configElement_v))
+                if(!_mockdata.TryGetValue(key, out ConfigElement_v1? configElement_v))
                 {
                     configElement_v = new ConfigElement_v1();
                     configElement_v.DataType = "float";
@@ -250,6 +292,15 @@ namespace OGA.InfraBase.Services
                     _mockdata.Add(key, configElement_v);
                     return 1;
                 }
+                // Found it.
+
+                // Verify it's not null...
+                if(configElement_v == null)
+                {
+                    configElement_v = new ConfigElement_v1();
+                    configElement_v.DataType = "float";
+                    configElement_v.Key = key;
+                }
 
                 configElement_v.Value = val.ToString();
                 _mockdata[key] = configElement_v;
@@ -257,7 +308,7 @@ namespace OGA.InfraBase.Services
             }
             catch (Exception exception)
             {
-                Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(SetValue)} - encountered an exception.");
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(SetValue)} - encountered an exception.");
                 return -10;
             }
         }
@@ -266,7 +317,7 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                if(!_mockdata.TryGetValue(key, out ConfigElement_v1 configElement_v))
+                if(!_mockdata.TryGetValue(key, out ConfigElement_v1? configElement_v))
                 {
                     configElement_v = new ConfigElement_v1();
                     configElement_v.DataType = "string";
@@ -276,13 +327,21 @@ namespace OGA.InfraBase.Services
                     return 1;
                 }
 
+                // Verify it's not null...
+                if(configElement_v == null)
+                {
+                    configElement_v = new ConfigElement_v1();
+                    configElement_v.DataType = "string";
+                    configElement_v.Key = key;
+                }
+
                 configElement_v.Value = val;
                 _mockdata[key] = configElement_v;
                 return 1;
             }
             catch (Exception exception)
             {
-                Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(SetValue)} - encountered an exception.");
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(SetValue)} - encountered an exception.");
                 return -10;
             }
         }
@@ -291,25 +350,31 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                if(!_mockdata.TryGetValue(key, out ConfigElement_v1 configElement_v))
+                if(!_mockdata.TryGetValue(key, out ConfigElement_v1? configElement_v))
                 {
                     configElement_v = new ConfigElement_v1();
                     configElement_v.DataType = "DateTime";
                     configElement_v.Key = key;
                     configElement_v.Value = val.ToUniversalTime().ToString("O");
                     _mockdata.Add(key, configElement_v);
-                }
-                else
-                {
-                    configElement_v.Value = val.ToUniversalTime().ToString("O");
-                    _mockdata[key] = configElement_v;
+                    return 1;
                 }
 
+                // Verify it's not null...
+                if(configElement_v == null)
+                {
+                    configElement_v = new ConfigElement_v1();
+                    configElement_v.DataType = "DateTime";
+                    configElement_v.Key = key;
+                }
+
+                configElement_v.Value = val.ToUniversalTime().ToString("O");
+                _mockdata[key] = configElement_v;
                 return 1;
             }
             catch (Exception exception)
             {
-                Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(SetValue)} - encountered an exception.");
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(SetValue)} - encountered an exception.");
                 return -10;
             }
         }
@@ -350,7 +415,7 @@ namespace OGA.InfraBase.Services
                 return -10;
             }
         }
-        protected virtual object Get_Default(string key)
+        protected virtual object? Get_Default(string key)
         {
             return null;
             // Add defaults like this....
@@ -369,14 +434,14 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                if(_mockdata.TryGetValue(key, out ConfigElement_v1 configElement_v))
+                if(_mockdata.TryGetValue(key, out ConfigElement_v1? configElement_v))
                 {
                     _mockdata.Remove(key);
                 }
             }
             catch (Exception exception)
             {
-                Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(Delete)} - encountered an exception.");
+                OGA.SharedKernel.Logging_Base.Logger_Ref?.Error(exception, $"{_classname}:{nameof(Delete)} - encountered an exception.");
             }
         }
     }

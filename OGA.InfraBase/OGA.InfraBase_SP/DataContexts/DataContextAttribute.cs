@@ -29,6 +29,9 @@ namespace OGA.InfraBase.DataContexts
         // Disable the default constructor...
         private DataContextAttribute()
         {
+            Provider = "";
+            ShortName = "";
+            ConfigSectionName = "";
         }
 
         public DataContextAttribute(string provider, string shortname, string configname)
