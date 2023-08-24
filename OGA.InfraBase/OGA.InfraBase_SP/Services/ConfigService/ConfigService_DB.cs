@@ -42,7 +42,7 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                OGA.DomainBase.Entities.ConfigElement_v1 ce = _context.ConfigData.Find(key);
+                var ce = _context.ConfigData.Find(key);
                 if (ce == null)
                 {
                     // Not found.
@@ -83,7 +83,7 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                OGA.DomainBase.Entities.ConfigElement_v1 ce = _context.ConfigData.Find(key);
+                var ce = _context.ConfigData.Find(key);
                 if (ce == null)
                 {
                     // Not found.
@@ -123,7 +123,7 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                OGA.DomainBase.Entities.ConfigElement_v1 ce = _context.ConfigData.Find(key);
+                var ce = _context.ConfigData.Find(key);
                 if (ce == null)
                 {
                     // Not found.
@@ -163,7 +163,7 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                OGA.DomainBase.Entities.ConfigElement_v1 ce = _context.ConfigData.Find(key);
+                var ce = _context.ConfigData.Find(key);
                 if (ce == null)
                 {
                     // Not found.
@@ -203,7 +203,7 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                OGA.DomainBase.Entities.ConfigElement_v1 ce = _context.ConfigData.Find(key);
+                var ce = _context.ConfigData.Find(key);
                 if (ce == null)
                 {
                     // Not found.
@@ -241,7 +241,7 @@ namespace OGA.InfraBase.Services
             try
             {
                 // See if the value is currently stored...
-                OGA.DomainBase.Entities.ConfigElement_v1 ce = _context.ConfigData.Find(key);
+                var ce = _context.ConfigData.Find(key);
                 if (ce == null)
                 {
                     // Not found.
@@ -281,7 +281,7 @@ namespace OGA.InfraBase.Services
             try
             {
                 // See if the value is currently stored...
-                OGA.DomainBase.Entities.ConfigElement_v1 ce = _context.ConfigData.Find(key);
+                var ce = _context.ConfigData.Find(key);
                 if (ce == null)
                 {
                     // Not found.
@@ -319,7 +319,7 @@ namespace OGA.InfraBase.Services
             try
             {
                 // See if the value is currently stored...
-                OGA.DomainBase.Entities.ConfigElement_v1 ce = _context.ConfigData.Find(key);
+                var ce = _context.ConfigData.Find(key);
                 if (ce == null)
                 {
                     // Not found.
@@ -359,7 +359,7 @@ namespace OGA.InfraBase.Services
             try
             {
                 // See if the value is currently stored...
-                OGA.DomainBase.Entities.ConfigElement_v1 ce = _context.ConfigData.Find(key);
+                var ce = _context.ConfigData.Find(key);
                 if (ce == null)
                 {
                     // Not found.
@@ -406,7 +406,7 @@ namespace OGA.InfraBase.Services
                  */
 
                 // See if the value is currently stored...
-                OGA.DomainBase.Entities.ConfigElement_v1 ce = _context.ConfigData.Find(key);
+                var ce = _context.ConfigData.Find(key);
                 if (ce == null)
                 {
                     // Not found.
@@ -444,9 +444,9 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                string keyname = "";
-                int intval = 0;
-                string stringval = "";
+                //string keyname = "";
+                //int intval = 0;
+                //string stringval = "";
 
                 // Add defaults like this...
                 //{
@@ -476,7 +476,7 @@ namespace OGA.InfraBase.Services
                 return -10;
             }
         }
-        protected virtual object Get_Default(string key)
+        protected virtual object? Get_Default(string key)
         {
             return null;
             // Add defaults like this....

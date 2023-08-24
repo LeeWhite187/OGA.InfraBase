@@ -318,9 +318,9 @@ namespace OGA.InfraBase.Services
         {
             try
             {
-                string keyname = "";
-                int intval = 0;
-                string stringval = "";
+                //string keyname = "";
+                //int intval = 0;
+                //string stringval = "";
 
                 // Add defaults like this...
                 //{

@@ -20,7 +20,7 @@ namespace OGA.InfraBase.DataContexts
         {
             OGA.SharedKernel.Logging_Base.Logger_Ref?.Info("cDBDContext_Base:DataContext - started.");
 
-            this._classname = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.Name;
+            this._classname = System.Reflection.MethodBase.GetCurrentMethod()?.DeclaringType?.Name ?? "";
 
             OGA.SharedKernel.Logging_Base.Logger_Ref?.Debug(
                 "NLog injected into " + _classname);
@@ -31,7 +31,7 @@ namespace OGA.InfraBase.DataContexts
         {
             OGA.SharedKernel.Logging_Base.Logger_Ref?.Info("cDBDContext_Base:DataContext - started.");
 
-            this._classname = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.Name;
+            this._classname = System.Reflection.MethodBase.GetCurrentMethod()?.DeclaringType?.Name ?? "";
 
             OGA.SharedKernel.Logging_Base.Logger_Ref?.Debug(
                 "NLog injected into " + _classname);
@@ -119,6 +119,6 @@ namespace OGA.InfraBase.DataContexts
             return base.SaveChanges();
         }
 
-        public DbSet<OGA.DomainBase.Entities.ConfigElement_v1> ConfigData { get; set; }
+        public DbSet<OGA.DomainBase.Entities.ConfigElement_v1> ConfigData { get; set; } = null!;
     }
 }
