@@ -1,4 +1,9 @@
 // Jenkins - Build and Publish Pipeline for Cross-Platform Binaries
+//	Rev:	3
+//	Date:	20240313
+//	Changes:	Split the nuget package generation, into separate steps.
+//				This allows us to generate a nupkg file with pdb, and create a snupkg file (for a symbol server).
+//				Disabled ability to publish to Azure Artifacts.
 //	Rev:	2
 //	Date:	20230821
 //	Changes:	Updated to publish pakages to Azure Artifacts.
@@ -140,30 +145,43 @@ pipeline
 				sh "dotnet build '${projectFolder}_NET6/${projectName}_NET6.csproj' -c DebugWin --runtime win-x64 --no-self-contained"
            }
 		}
-        stage('Create Nuget Package')
+
+// These next steps create and publish a nuget package.
+// In order to get pdb files into a nuget package, we cannot specify the '-Symbols' switch on the nuget pack line.
+// But, we want pdb files in the nuget, until we have a reliable symbol server.
+// As well as, logic to generate the snupkg and publish it.
+// So, we will first create a nuget package (without the Symbols switch) so it includes a pdb, and publish the nupkg file.
+// Then, we will create a nuget package again (with the Symbols switch), but we will only publish the snupkg.
+        stage('Create Nupkg w/pdb')
 		{
            steps
 		   {
-				sh "mono /usr/lib/nuget/nuget.exe pack ./${solutionFolder}/${projectName}.nuspec -IncludeReferencedProjects -symbols -SymbolPackageFormat snupkg -OutputDirectory ./Publish -Verbosity detailed"
+				//sh "mono /usr/lib/nuget/nuget.exe pack ./${solutionFolder}/${projectName}.nuspec -IncludeReferencedProjects -Symbols -SymbolPackageFormat snupkg -OutputDirectory ./Publish -Verbosity detailed"
+				sh "mono /usr/lib/nuget/nuget.exe pack ./${solutionFolder}/${projectName}.nuspec -IncludeReferencedProjects -OutputDirectory ./Publish -Verbosity detailed"
            }
 		}
-        stage('Publish Nuget Package')
+        stage('Publish Nupkg')
 		{
            steps
 		   {
 				sh "dotnet nuget push -s https://buildtools.ogsofttech.com:8079/v3/index.json './Publish/${projectName}.${version3}.nupkg'"
+           }
+		}
+        stage('Create Nupkg w/snupkg')
+		{
+           steps
+		   {
+				sh "mono /usr/lib/nuget/nuget.exe pack ./${solutionFolder}/${projectName}.nuspec -IncludeReferencedProjects -Symbols -SymbolPackageFormat snupkg -OutputDirectory ./Publish -Verbosity detailed"
+           }
+		}
+        stage('Publish Snupkg')
+		{
+           steps
+		   {
 				sh "dotnet nuget push -s https://buildtools.ogsofttech.com:8079/v3/index.json './Publish/${projectName}.${version3}.snupkg'"
            }
 		}
-//        stage('Publish Nuget Package')
-//		{
-//           steps
-//		   {
-//				// This will publish the package to the Azure Artifacts Feed...
-//				sh "nuget push -Source 'AzureArtifactsFeed' -ApiKey az './Publish/${projectName}.${version3}.nupkg' -ConfigFile '/projects/config/nuget/NuGet.Config'"
-//				sh "nuget push -Source 'AzureArtifactsFeed' -ApiKey az './Publish/${projectName}.${version3}.snupkg' -ConfigFile '/projects/config/nuget/NuGet.Config'"
-//           }
-//		}
+// These next steps set the version tag in GitHub...
 		stage ('Set New Version Tag')
 		{
             steps
@@ -203,7 +221,7 @@ pipeline
 				def jobName = env.JOB_NAME
 				def buildNumber = env.BUILD_NUMBER
 
-				def requestBody =
+				notificationbody =
 				[
 					job: jobName,
 					jobtype: 'build',
@@ -232,7 +250,7 @@ pipeline
 				def jobName = env.JOB_NAME
 				def buildNumber = env.BUILD_NUMBER
 
-				def requestBody =
+				notificationbody =
 				[
 					job: jobName,
 					jobtype: 'build',
