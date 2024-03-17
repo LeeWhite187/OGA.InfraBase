@@ -20,7 +20,6 @@ Dependencies:	.NET 5.0
 				Microsoft.EntityFrameworkCore.Design v5.0.10 or v6.0.6
 				Microsoft.EntityFrameworkCore.Relational v5.0.10 or v6.0.6
 				Microsoft.EntityFrameworkCore.Tools v5.0.10 or v6.0.6
-				NETCore_Common v1.5.8
 				OGA.DomainBase v2.0.6
 				OGA.SharedKernel v1.2.1
 Repo_URL:		https://192.168.1.217/svn/NETCore_SoftwareLibraries/

@@ -22,7 +22,7 @@ namespace OGA.DomainBase_Tests
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //// Iterate all assemblies, and search for types that implement IEntityTypeConfiguration, and register each one.
-            //var asl = NETCore_Common.Process.cAssemblyHelper.Get_All_Assemblies();
+            //var asl = OGA.SharedKernel.Process.AssemblyHelper_Base.AssemblyHelperRef.Get_All_Assemblies();
             //foreach (var fff in asl)
             //{
             //    modelBuilder.ApplyConfigurationsFromAssembly(fff);

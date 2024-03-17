@@ -1,18 +1,17 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <!-- NoWarn below suppresses NETSDK1138 project-wide -->
-    <!-- This suppresses the IDE warning that NET5.0 is out of support. -->
-    <NoWarn>$(NoWarn);NETSDK1138</NoWarn>
+    <TargetFramework>net7.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
 
     <RootNamespace>OGA.InfraBase_Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.9" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.2.8" />
     <PackageReference Include="MSTest.TestFramework" Version="2.2.10" />
@@ -24,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OGA.InfraBase_NET5\OGA.InfraBase_NET5.csproj" />
+    <ProjectReference Include="..\OGA.InfraBase_NET6\OGA.InfraBase_NET6.csproj" />
   </ItemGroup>
 
   <Import Project="..\OGA.InfraBase_SP_Tests\OGA.InfraBase_SP_Tests.projitems" Label="Shared" />

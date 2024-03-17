@@ -11,6 +11,9 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <!-- NoWarn below suppresses NETSDK1138 project-wide -->
+    <!-- This suppresses the IDE warning that NET5.0 is out of support. -->
+    <NoWarn>$(NoWarn);NETSDK1138</NoWarn>
     <Version>2.1.13</Version>
     <AssemblyVersion>2.1.37.13</AssemblyVersion>
     <FileVersion>2.1.37.13</FileVersion>
@@ -30,15 +33,15 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="$(Configuration.EndsWith('Win'))">
-    <DefineConstants>$(DefineConstants);Windows</DefineConstants>
+    <DefineConstants>$(DefineConstants);Windows;NET5</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="$(Configuration.EndsWith('Linux'))">
-    <DefineConstants>$(DefineConstants);Linux</DefineConstants>
+    <DefineConstants>$(DefineConstants);Linux;NET5</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="$(Configuration.EndsWith('OSX'))">
-    <DefineConstants>$(DefineConstants);OSX</DefineConstants>
+    <DefineConstants>$(DefineConstants);OSX;NET5</DefineConstants>
   </PropertyGroup>
 
   <Import Project="..\OGA.InfraBase_SP\OGA.InfraBase_SP.projitems" Label="Shared" />
@@ -55,10 +58,9 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="NETCore_Common" Version="2.6.1" />
-    <PackageReference Include="OGA.AppSettings.Writeable" Version="1.5.5" />
-    <PackageReference Include="OGA.DomainBase" Version="2.0.26" />
-    <PackageReference Include="OGA.SharedKernel" Version="3.1.0" />
+    <PackageReference Include="OGA.AppSettings.Writeable" Version="1.7.2" />
+    <PackageReference Include="OGA.DomainBase" Version="2.1.2" />
+    <PackageReference Include="OGA.SharedKernel" Version="3.3.1" />
   </ItemGroup>
 
 </Project>

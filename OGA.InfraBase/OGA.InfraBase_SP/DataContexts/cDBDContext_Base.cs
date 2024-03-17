@@ -10,6 +10,9 @@ using System.Threading;
 
 namespace OGA.InfraBase.DataContexts
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class cDBDContext_Base : DbContext
     {
         protected string _classname;
@@ -39,8 +42,11 @@ namespace OGA.InfraBase.DataContexts
             OGA.SharedKernel.Logging_Base.Logger_Ref?.Info("cDBDContext_Base:DataContext - completed.");
         }
 
-#if NET6_0
-        // NOTE: This convention converter is only available in EF6 and forward.
+#if NET5
+        // NOTE: The convention converter in this block is only available in EF6 and forward.
+        // So, EF5 usage will require individual value converters for each DateTime property in the model builder logic of each entity.
+#else
+        // NOTE: The convention converter in this block is only available in EF6 and forward.
         // So, EF5 usage will require individual value converters for each DateTime property in the model builder logic of each entity.
 
 
@@ -58,13 +64,12 @@ namespace OGA.InfraBase.DataContexts
                 .Properties<DateTime>()
                 .HaveConversion<DateTimeUTCConverter>();
         }
-
 #endif
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Iterate all assemblies, and search for types that implement IEntityTypeConfiguration, and register each one.
-            var asl = NETCore_Common.Process.cAssemblyHelper.Get_All_Assemblies();
+            var asl = OGA.SharedKernel.Process.AssemblyHelper_Base.AssemblyHelperRef.Get_All_Assemblies();
             foreach (var fff in asl)
             {
                 modelBuilder.ApplyConfigurationsFromAssembly(fff);

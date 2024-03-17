@@ -4,7 +4,7 @@ using OGA.InfraBase.Services;
 using System.Collections.Generic;
 using System.Web;
 
-namespace OGA.InfraBase_NET6_Tests
+namespace OGA.InfraBase_Tests
 {
     [TestClass]
     public class UriService_Tests
