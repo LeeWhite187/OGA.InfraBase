@@ -23,8 +23,8 @@ REM Create the composite nuget package file from built libraries...
 C:\Programs\nuget\nuget.exe pack ./OGA.InfraBase.nuspec -IncludeReferencedProjects -symbols -SymbolPackageFormat snupkg -OutputDirectory ./Publish -Verbosity detailed
 
 REM To publish nuget package...
-dotnet nuget push -s http://192.168.1.161:8080/v3/index.json ".\Publish\OGA.InfraBase.1.5.8.nupkg"
-dotnet nuget push -s http://192.168.1.161:8080/v3/index.json ".\Publish\OGA.InfraBase.1.5.8.snupkg"
+dotnet nuget push -s http://192.168.1.161:8080/v3/index.json ".\Publish\OGA.InfraBase.3.4.4.nupkg"
+dotnet nuget push -s http://192.168.1.161:8080/v3/index.json ".\Publish\OGA.InfraBase.3.4.4.snupkg"
 
 TIMEOUT 10
 

@@ -12,9 +12,9 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <PlatformTarget>x64</PlatformTarget>
-    <Version>2.1.13</Version>
-    <AssemblyVersion>2.1.37.13</AssemblyVersion>
-    <FileVersion>2.1.37.13</FileVersion>
+    <Version>3.4.4</Version>
+    <AssemblyVersion>3.4.41.4</AssemblyVersion>
+    <FileVersion>3.4.41.4</FileVersion>
     <PackageId>OGA.InfraBase</PackageId>
     <Product>OGA Libraries</Product>
     <Description>Base library for infrastructure classes, and entities of any Id type.</Description>
@@ -59,9 +59,9 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="OGA.AppSettings.Writeable" Version="1.7.4" />
-    <PackageReference Include="OGA.DomainBase" Version="2.1.4" />
-    <PackageReference Include="OGA.SharedKernel" Version="3.3.2" />
+    <PackageReference Include="OGA.AppSettings.Writeable" Version="1.7.5" />
+    <PackageReference Include="OGA.DomainBase" Version="2.1.6" />
+    <PackageReference Include="OGA.SharedKernel" Version="3.3.3" />
   </ItemGroup>
 
 </Project>
