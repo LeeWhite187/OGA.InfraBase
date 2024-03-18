@@ -63,7 +63,7 @@ Please see the [License](LICENSE).
 
 ## Opinionation Apology...
 This library references NLog, directly, for now.\
-I understand this may appear overly opinionated, at the bottom layer of a process stack. I agree... though, NLog works very well.\
+I understand this may appear overly opinionated, at the infrastructure layer of a process stack. I agree... though, NLog works very well.\
 Once I get a chance to circle back, and work through a more agnostic logging interface, I will update (removing the specific logger tie).
 
 You're welcome to swap out and compile whatever logger you'd like, of course.\
