@@ -8,6 +8,7 @@
 //	Rev:	2
 //	Date:	20230821
 //	Changes:	Updated to publish pakages to Azure Artifacts.
+//	Rev:	1
 //	Date:	20220930
 //	Changes:	This version was updated to accept an additional variable from Jenkins, for the target framework.
 //				This additional variable allows the pipeline to name the published zip file for the framework target, and to create a folder in the Artifactory repo, specific to each target framework.
