@@ -6,8 +6,8 @@ namespace OGA.InfraBase.Services
 {
     public interface IConfigUpdateService
     {
-        int Get_BuildData_Rev();
-        void Set_BuildData_Rev(int revnumber);
+        string Get_BuildData_Rev();
+        void Set_BuildData_Rev(string revnumber);
 
         string Get_RepoType();
         void Set_RepoType(string repotype);
@@ -49,22 +49,15 @@ namespace OGA.InfraBase.Services
         #endregion
 
 
-        public int Get_BuildData_Rev()
+        public string Get_BuildData_Rev()
         {
-            try
-            {
-                return Convert.ToInt32(this._builddata.Value.Source_Revision);
-            }
-            catch (Exception)
-            {
-                return -9999;
-            }
+            return this._builddata.Value.Source_Revision;
         }
-        public void Set_BuildData_Rev(int revnumber)
+        public void Set_BuildData_Rev(string rev)
         {
             this._builddata.Update(opt =>
             {
-                opt.Source_Revision = revnumber.ToString();
+                opt.Source_Revision = rev.ToString();
             });
         }
 
