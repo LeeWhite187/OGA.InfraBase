@@ -7,7 +7,7 @@ using System.Web;
 namespace OGA.InfraBase_Tests
 {
     [TestClass]
-    public class UriService_Tests
+    public class UriService_Tests : OGA.Testing.Lib.Test_Base
     {
         /* Tests for the Uri Service v2 class.
 
@@ -17,6 +17,39 @@ namespace OGA.InfraBase_Tests
          
          
          */
+
+
+
+        #region Setup
+
+        [TestInitialize]
+        public override void Setup()
+        {
+            // Call this first...
+            base.Setup();
+
+            Enable_AllLoggingLevels();
+
+            Print_Enabled_LogLevels();
+
+            Load_AssemblyHelperInstance();
+
+            //// Runs before each test. (Optional)
+        }
+
+        [TestCleanup]
+        public override void TearDown()
+        {
+            // Runs after each test. (Optional)
+
+
+            // Call this last...
+            base.TearDown();
+        }
+
+        #endregion
+
+
 
         // Test  1 - Construct an instance.
         [TestMethod]

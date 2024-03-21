@@ -23,9 +23,40 @@ namespace OGA.DomainBase_Tests
         // 12.  Paginated Query zero records.
      */
         [TestClass]
-    public class PaginatedList_GuidId_Tests
+    public class PaginatedList_GuidId_Tests : OGA.Testing.Lib.Test_Base
     {
         static private string _dbname = System.Guid.NewGuid().ToString();
+
+
+        #region Setup
+
+        [TestInitialize]
+        public override void Setup()
+        {
+            // Call this first...
+            base.Setup();
+
+            Enable_AllLoggingLevels();
+
+            Print_Enabled_LogLevels();
+
+            Load_AssemblyHelperInstance();
+
+            //// Runs before each test. (Optional)
+        }
+
+        [TestCleanup]
+        public override void TearDown()
+        {
+            // Runs after each test. (Optional)
+
+
+            // Call this last...
+            base.TearDown();
+        }
+
+        #endregion
+
 
         //  1.  Paginated Query for  1 record  with page size of 10.
         [TestMethod]
