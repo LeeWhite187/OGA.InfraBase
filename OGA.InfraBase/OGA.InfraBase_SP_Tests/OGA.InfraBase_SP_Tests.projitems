@@ -9,6 +9,7 @@
     <Import_RootNamespace>OGA.InfraBase_SP_Tests</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)TestTemplate_Assembly.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UriService_v2_Tests.cs" />
   </ItemGroup>
 </Project>

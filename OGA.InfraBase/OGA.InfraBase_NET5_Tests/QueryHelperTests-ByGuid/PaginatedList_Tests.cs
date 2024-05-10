@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OGA.Testing.Lib;
 
 namespace OGA.DomainBase_Tests
 {
@@ -22,36 +23,61 @@ namespace OGA.DomainBase_Tests
         // 11.  Paginated Query pageSize = 0.
         // 12.  Paginated Query zero records.
      */
-        [TestClass]
-    public class PaginatedList_GuidId_Tests : OGA.Testing.Lib.Test_Base
+
+    [TestCategory(Test_Types.Unit_Tests)]
+    [TestClass]
+    public class PaginatedList_GuidId_Tests : OGA.Testing.Lib.Test_Base_abstract
     {
         static private string _dbname = System.Guid.NewGuid().ToString();
 
 
         #region Setup
 
-        [TestInitialize]
-        public override void Setup()
+        /// <summary>
+        /// This will perform any test setup before the first class tests start.
+        /// This exists, because MSTest won't call the class setup method in a base class.
+        /// Be sure this method exists in your top-level test class, and that it calls the corresponding test class setup method of the base.
+        /// </summary>
+        [ClassInitialize]
+        static public void TestClass_Setup(TestContext context)
         {
-            // Call this first...
-            base.Setup();
-
-            Enable_AllLoggingLevels();
-
-            Print_Enabled_LogLevels();
-
-            Load_AssemblyHelperInstance();
-
-            //// Runs before each test. (Optional)
+            TestClassBase_Setup(context);
+        }
+        /// <summary>
+        /// This will cleanup resources after all class tests have completed.
+        /// This exists, because MSTest won't call the class cleanup method in a base class.
+        /// Be sure this method exists in your top-level test class, and that it calls the corresponding test class cleanup method of the base.
+        /// </summary>
+        [ClassCleanup]
+        static public void TestClass_Cleanup()
+        {
+            TestClassBase_Cleanup();
         }
 
+        /// <summary>
+        /// Called before each test runs.
+        /// Be sure this method exists in your top-level test class, and that it calls the corresponding test setup method of the base.
+        /// </summary>
+        [TestInitialize]
+        override public void Setup()
+        {
+            //// Push the TestContext instance that we received at the start of the current test, into the common property of the test base class...
+            //Test_Base.TestContext = TestContext;
+
+            base.Setup();
+
+            // Runs before each test. (Optional)
+        }
+
+        /// <summary>
+        /// Called after each test runs.
+        /// Be sure this method exists in your top-level test class, and that it calls the corresponding test cleanup method of the base.
+        /// </summary>
         [TestCleanup]
-        public override void TearDown()
+        override public void TearDown()
         {
             // Runs after each test. (Optional)
 
-
-            // Call this last...
             base.TearDown();
         }
 
