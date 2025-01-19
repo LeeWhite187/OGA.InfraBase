@@ -17,14 +17,14 @@
     <PackageReference Include="MSTest.TestFramework" Version="3.0.4" />
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="OGA.Common.Lib.NetCore" Version="3.5.0" />
-    <PackageReference Include="OGA.DomainBase" Version="2.2.5" />
-    <PackageReference Include="OGA.SharedKernel" Version="3.5.4" />
-    <PackageReference Include="OGA.Testing.Lib" Version="1.11.8" />
+    <PackageReference Include="OGA.Common.Lib.NetCore" Version="3.8.0" />
+    <PackageReference Include="OGA.DomainBase" Version="2.2.6" />
+    <PackageReference Include="OGA.SharedKernel" Version="3.6.0" />
+    <PackageReference Include="OGA.Testing.Lib" Version="1.12.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OGA.InfraBase_NET6\OGA.InfraBase_NET6.csproj" />
+    <ProjectReference Include="..\OGA.InfraBase_NET7\OGA.InfraBase_NET7.csproj" />
   </ItemGroup>
 
   <Import Project="..\OGA.InfraBase_SP_Tests\OGA.InfraBase_SP_Tests.projitems" Label="Shared" />

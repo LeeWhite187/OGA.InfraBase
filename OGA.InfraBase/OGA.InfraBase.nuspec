@@ -19,27 +19,27 @@
         <dependency id="AutoMapper" version="12.0.0" exclude="Build,Analyzers" />
         <dependency id="AutoMapper.Extensions.Microsoft.DependencyInjection" version="12.0.0" exclude="Build,Analyzers" />
         <dependency id="Microsoft.EntityFrameworkCore.Relational" version="5.0.17" exclude="Build,Analyzers" />
-        <dependency id="OGA.AppSettings.Writeable" version="1.8.3" exclude="Build,Analyzers" />
-        <dependency id="OGA.DomainBase" version="2.2.5" exclude="Build,Analyzers" />
-        <dependency id="OGA.SharedKernel" version="3.5.4" exclude="Build,Analyzers" />
+        <dependency id="OGA.AppSettings.Writeable" version="1.8.4" exclude="Build,Analyzers" />
+        <dependency id="OGA.DomainBase" version="2.2.6" exclude="Build,Analyzers" />
+        <dependency id="OGA.SharedKernel" version="3.6.0" exclude="Build,Analyzers" />
       </group>
       <group targetFramework="net6.0">
         <dependency id="AutoMapper" version="12.0.0" exclude="Build,Analyzers" />
         <dependency id="AutoMapper.Extensions.Microsoft.DependencyInjection" version="12.0.0" exclude="Build,Analyzers" />
         <dependency id="Microsoft.EntityFrameworkCore.InMemory" version="6.0.9" exclude="Build,Analyzers" />
         <dependency id="Microsoft.EntityFrameworkCore.Relational" version="6.0.9" exclude="Build,Analyzers" />
-        <dependency id="OGA.AppSettings.Writeable" version="1.8.3" exclude="Build,Analyzers" />
-        <dependency id="OGA.DomainBase" version="2.2.5" exclude="Build,Analyzers" />
-        <dependency id="OGA.SharedKernel" version="3.5.4" exclude="Build,Analyzers" />
+        <dependency id="OGA.AppSettings.Writeable" version="1.8.4" exclude="Build,Analyzers" />
+        <dependency id="OGA.DomainBase" version="2.2.6" exclude="Build,Analyzers" />
+        <dependency id="OGA.SharedKernel" version="3.6.0" exclude="Build,Analyzers" />
       </group>
       <group targetFramework="net7.0">
         <dependency id="AutoMapper" version="12.0.0" exclude="Build,Analyzers" />
         <dependency id="AutoMapper.Extensions.Microsoft.DependencyInjection" version="12.0.0" exclude="Build,Analyzers" />
         <dependency id="Microsoft.EntityFrameworkCore.InMemory" version="6.0.9" exclude="Build,Analyzers" />
         <dependency id="Microsoft.EntityFrameworkCore.Relational" version="6.0.9" exclude="Build,Analyzers" />
-        <dependency id="OGA.AppSettings.Writeable" version="1.8.3" exclude="Build,Analyzers" />
-        <dependency id="OGA.DomainBase" version="2.2.5" exclude="Build,Analyzers" />
-        <dependency id="OGA.SharedKernel" version="3.5.4" exclude="Build,Analyzers" />
+        <dependency id="OGA.AppSettings.Writeable" version="1.8.4" exclude="Build,Analyzers" />
+        <dependency id="OGA.DomainBase" version="2.2.6" exclude="Build,Analyzers" />
+        <dependency id="OGA.SharedKernel" version="3.6.0" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>
